@@ -1,0 +1,11 @@
+﻿{
+  "Name": "NuevoAplicación",
+  "Type": "App",
+  "Id": "0tjAajcGREGVWFV_zapfOw",
+  "Reference": "QGI_UAuitEGBOVdtCA1tlw/0tjAajcGREGVWFV_zapfOw",
+  "Created": "2024-01-15T16:19:01.0593035Z",
+  "Updated": "2024-01-15T16:19:01.0593035Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

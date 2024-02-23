@@ -1,0 +1,12 @@
+﻿{
+  "Name": "1.0.0",
+  "Type": "AppVersion",
+  "Id": "WPme8z-5n0mpVG2eiobCog",
+  "Reference": "QGI_UAuitEGBOVdtCA1tlw/WPme8z-5n0mpVG2eiobCog",
+  "ParentRef": "QGI_UAuitEGBOVdtCA1tlw/0tjAajcGREGVWFV_zapfOw",
+  "Created": "2024-01-15T16:19:02.0064075Z",
+  "Updated": "2024-01-15T16:19:02.0064075Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

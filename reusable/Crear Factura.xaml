@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1668,7106</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,7631</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Generate_Invoice_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -128,7 +128,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Generar Factura e Imprimirla" sap:VirtualizedContainerService.HintSize="1678,7041" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Generar Factura e Imprimirla" sap:VirtualizedContainerService.HintSize="1678,7566" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="vVenta" />
       <Variable x:TypeArguments="x:String" Name="vOrden" />
@@ -140,7 +140,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="1616,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+    <Assign sap:VirtualizedContainerService.HintSize="1616,81" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[vOrden]</OutArgument>
       </Assign.To>
@@ -148,7 +148,7 @@
         <InArgument x:TypeArguments="x:String">[io_ArgumentoOrden]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1616,82" sap2010:WorkflowViewState.IdRef="Assign_11">
+    <Assign sap:VirtualizedContainerService.HintSize="1616,81" sap2010:WorkflowViewState.IdRef="Assign_11">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[vVenta]</OutArgument>
       </Assign.To>
@@ -219,13 +219,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Use Browser Chrome: Zureo Gestión Online | Ingreso de comprobantes" sap:VirtualizedContainerService.HintSize="1616,6499" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[webZureo]" InteractionMode="Simulate" IsIncognito="{x:Null}" OpenMode="IfNotOpen" OutUiElement="[webZureo]" ScopeGuid="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Zureo Gestión Online | Ingreso de comprobantes" sap:VirtualizedContainerService.HintSize="1616,7026" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[webZureo]" InteractionMode="Simulate" OpenMode="IfNotOpen" OutUiElement="[webZureo]" ScopeGuid="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="1582,6362" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="1582,6889" sap2010:WorkflowViewState.IdRef="Sequence_22">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -250,7 +250,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <uix:NCheckState ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Comprobar el estado de la aplicación 'Ingreso de comprobantes'" Exists="{x:Null}" sap:VirtualizedContainerService.HintSize="1520,570" sap2010:WorkflowViewState.IdRef="NCheckState_3" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" Result="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="6" Version="V3">
+            <uix:NCheckState DisplayName="Comprobar el estado de la aplicación 'Ingreso de comprobantes'" sap:VirtualizedContainerService.HintSize="1520,570" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="6" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="El objetivo aparece." sap:VirtualizedContainerService.HintSize="450,140" sap2010:WorkflowViewState.IdRef="Sequence_36">
                   <sap:WorkflowViewStateService.ViewState>
@@ -285,8 +285,8 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox AutoCloseAfter="00:00:01" Buttons="{x:Null}" Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="MessageBox_16" Text="[&quot;No estas en el Modulo de Facturacion... Procede con el Login&quot;]" TopMost="{x:Null}" />
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login Zureo.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="reusable\Login Zureo.xaml">
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:01" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="MessageBox_16" Text="[&quot;No estas en el Modulo de Facturacion... Procede con el Login&quot;]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login Zureo.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="reusable\Login Zureo.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <scg:Dictionary x:TypeArguments="x:String, Argument" />
                     </ui:InvokeWorkflowFile.Arguments>
@@ -377,13 +377,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[vVenta]" DisplayName="Iterar los items de la variable vVenta que es de tipo datatable " sap:VirtualizedContainerService.HintSize="1520,3253" sap2010:WorkflowViewState.IdRef="ForEachRow_2" MaxIterations="{x:Null}" Values="{x:Null}">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[vVenta]" DisplayName="Iterar los items de la variable vVenta que es de tipo datatable " sap:VirtualizedContainerService.HintSize="1520,3780" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Venta" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="996,3067" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="996,3636" sap2010:WorkflowViewState.IdRef="Sequence_23">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="vCodigo" />
                       <Variable x:TypeArguments="x:String" Name="vNombre" />
@@ -430,7 +430,7 @@
                         <InArgument x:TypeArguments="x:String">[Venta.Item(3).ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="Instant" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'BUTTON'  busqueda avanzada" sap:VirtualizedContainerService.HintSize="954,193" sap2010:WorkflowViewState.IdRef="NClick_9" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="3" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Instant" DisplayName="Click 'BUTTON'  busqueda avanzada" sap:VirtualizedContainerService.HintSize="954,193" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="3" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="732, 553, 13, 13" DesignTimeScaleFactor="1" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl type='' tag='I' class='fas fa-binoculars' aaname='' /&gt;" Guid="1fcd8d50-2346-4c5c-a9c2-5d6ac07034ab" ImageBase64="" InformativeScreenshot="df9e02583ce0b28f3f565b545d338ecb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
@@ -444,7 +444,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <uix:NCheckState ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Comprobar el estado de la aplicación 'Búsqueda avanzada'" Exists="{x:Null}" sap:VirtualizedContainerService.HintSize="954,747" sap2010:WorkflowViewState.IdRef="NCheckState_14" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" Result="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+                    <uix:NCheckState DisplayName="Comprobar el estado de la aplicación 'Búsqueda avanzada'" sap:VirtualizedContainerService.HintSize="954,787" sap2010:WorkflowViewState.IdRef="NCheckState_14" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="El objetivo aparece." sap:VirtualizedContainerService.HintSize="450,530" sap2010:WorkflowViewState.IdRef="Sequence_71">
                           <sap:WorkflowViewStateService.ViewState>
@@ -452,12 +452,12 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="None" ContinueOnError="{x:Null}" DelayAfter="1" DelayBefore="1" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_17" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="Simulate" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" SecureText="{x:Null}" Text="[vCodigo]" Timeout="{x:Null}" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayAfter="1" DelayBefore="1" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_17" InteractionMode="Simulate" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Text="[vCodigo]" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="497, 231, 362, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control z-input ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="0da03df3-4e87-426c-a238-9faeeb5a757a" InformativeScreenshot="a2c0213f6f68ee843a307fd4c7a98a94.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click Boton Bucar" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_64" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="3" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Boton Bucar" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_64" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="3" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="1141, 239, 13, 13" DesignTimeScaleFactor="1" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;i' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='I' class='fa fa-search' aaname='' /&gt;" Guid="c7ed033b-32be-48eb-9f2e-687d61a8570e" InformativeScreenshot="e21d8b5cbc01fdbe4e81ec7838be4936.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
                             </uix:NClick.Target>
@@ -483,7 +483,7 @@
                         <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="257, 175, 868, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Búsqueda avanzada'" FullSelectorArgument="&lt;webctrl tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' class='modal-title ng-binding' aaname='             Búsqueda avanzada de artículos                                   ' check:innerText='Búsqueda avanzada de artículos' /&gt;" Guid="c43654a4-76a7-4ac0-859e-9b05b5a3faf4" InformativeScreenshot="55c38366328fc517b94111261cf73b8e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                       </uix:NCheckState.Target>
                     </uix:NCheckState>
-                    <uix:NCheckState ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Comprobar el estado de la aplicación 'Se Encuentra el Articulo?'" Exists="[vExisteArticulo]" sap:VirtualizedContainerService.HintSize="954,686" sap2010:WorkflowViewState.IdRef="NCheckState_1" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" Result="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="2" Version="V3">
+                    <uix:NCheckState DisplayName="Comprobar el estado de la aplicación 'Se Encuentra el Articulo?'" Exists="[vExisteArticulo]" sap:VirtualizedContainerService.HintSize="954,686" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="3" Version="V3">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="El objetivo aparece." sap:VirtualizedContainerService.HintSize="450,425" sap2010:WorkflowViewState.IdRef="Sequence_32">
                           <Sequence.Variables>
@@ -494,7 +494,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="2" DelayBefore="{x:Null}" DisplayName="Click 'Cancelar'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_16" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DisplayName="Click 'Cancelar'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" CvElementArea="1206, 939, 88, 31" CvTextArea="1223, 947, 55, 13" CvTextArgument="Cancelar" CvType="Button" DesignTimeRectangle="1208, 940, 85, 28" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Cancelar'" FullSelectorArgument="&lt;webctrl aaname='Cancelar' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cancelar' tag='BUTTON' type='button' class='btn z-btn btn-default btn-small' check:innerText='Cancelar' /&gt;" Guid="4421feaa-c87d-4f43-8072-d73bc1a4c33f" InformativeScreenshot="6ad4fb83dbddc964a6d90704f42648ac.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                             </uix:NClick.Target>
@@ -505,7 +505,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NClick>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Crear Articulo.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="reusable\Crear Articulo.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Crear Articulo.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="reusable\Crear Articulo.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="x:String" x:Key="in_ArgumentoCodigo">[vCodigo]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="in_ArgumentoNombre">[vNombre]</InArgument>
@@ -520,12 +520,12 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="True" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'en  en Articulo encontrado'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_13" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="False" DisplayName="Click 'en  en Articulo encontrado'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
                             <uix:NClick.Target>
-                              <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="295, 296, 514, 27" DesignTimeScaleFactor="1" FriendlyName="'(9307) Pizarra'" FullSelectorArgument="&lt;webctrl id='*' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dxGridContainer_846' tag='TABLE' /&gt;&lt;webctrl type='' class='articulo   pointer' tag='TD' aaname='                                                                                                                                                                                                                                                                                                                                          ' /&gt;" Guid="96c99a02-3afa-4a6f-9d9c-9d790291e382" ImageBase64="" InformativeScreenshot="e49bc4e48d6ab56338fac9e2d310ff79.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="572, 358, 514, 27" DesignTimeScaleFactor="1" FriendlyName="'(9307) Pizarra'" FullSelectorArgument="&lt;webctrl id='*' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dxGridContainer_846' tag='TABLE' /&gt;&lt;webctrl type='' class='articulo   pointer' tag='TD' aaname='                                                                                                                                                                                                                                                                                                                                          ' /&gt;" Guid="96c99a02-3afa-4a6f-9d9c-9d790291e382" ImageBase64="" InformativeScreenshot="82e777e839ac13f118a57ee2e5f8bd3b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target DesignTimeRectangle="273, 296, 23, 27" FriendlyName="'TD'" FullSelectorArgument="&lt;webctrl id='dxGridContainer_846' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dxGridContainer_846' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='z-cell-options   pointer' aaname='                                                                                                                                                                                                                                                                                                                                          ' /&gt;" SearchSteps="FuzzySelector" />
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <uix:Target DesignTimeRectangle="550, 358, 23, 27" FriendlyName="'TD'" FullSelectorArgument="&lt;webctrl id='dxGridContainer_846' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dxGridContainer_846' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='z-cell-options   pointer' aaname='                                                                                                                                                                                                                                                                                                                                          ' /&gt;" SearchSteps="FuzzySelector" />
                                   </scg:List>
                                 </uix:TargetAnchorable.Anchors>
                               </uix:TargetAnchorable>
@@ -537,7 +537,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NClick>
-                          <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="True" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'Seleccionar'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_14" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="False" DelayAfter="1" DelayBefore="0" DisplayName="Click 'Seleccionar'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="1792, 868, 151, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Seleccionar'" FullSelectorArgument="&lt;webctrl aaname='Seleccionar' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Seleccionar' tag='BUTTON' type='button' class='btn z-btn btn-primary btn-small' check:innerText='Seleccionar' /&gt;" Guid="816530c3-e6dc-4deb-96c2-43da5d7ab4c7" InformativeScreenshot="0834eaf244fded5ef742f9990ea5b7d5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -572,7 +572,35 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
-                    <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="None" ContinueOnError="False" DelayAfter="{x:Null}" DelayBefore="1" DelayBetweenKeys="0.1" DeselectAfter="{x:Null}" DisplayName="Escribe la Cantidad" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,254" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="Simulate" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" SecureText="{x:Null}" Text="[vCantidad]" Timeout="{x:Null}" Version="V3">
+                    <uix:NCheckState DisplayName="Comprobar el estado de la aplicación 'Búsqueda avanzada'" sap:VirtualizedContainerService.HintSize="954,489" sap2010:WorkflowViewState.IdRef="NCheckState_15" Mode="WaitDisappear" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="El objetivo desaparece." sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="El objetivo no desaparece." sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Click 'Seleccionar'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_65" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" CvElementArea="1300, 939, 103, 30" CvTextArea="1315, 947, 73, 13" CvTextArgument="Seleccionar" CvType="Button" DesignTimeRectangle="1301, 940, 101, 28" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Seleccionar'" FullSelectorArgument="&lt;webctrl aaname='Seleccionar' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Seleccionar' tag='BUTTON' type='button' class='btn z-btn btn-primary btn-small' check:innerText='Seleccionar' /&gt;" Guid="f2071e55-384a-49ff-bdf0-57f16a725a0b" InformativeScreenshot="382eca2e78a32b0726f3761c6724bf8a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" CvTextArea="533, 239, 220, 17" CvTextArgument="Busqueda avanzada de articulos" CvType="Text" DesignTimeRectangle="534, 237, 868, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Búsqueda avanzada'" FullSelectorArgument="&lt;webctrl tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' class='modal-title ng-binding' aaname='             Búsqueda avanzada de artículos                                   ' check:innerText='Búsqueda avanzada de artículos' /&gt;" Guid="1e83c596-2550-4309-8684-27aa37a383a2" InformativeScreenshot="73ad092704e37f34d45438d5c8da1339.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NCheckState.Target>
+                    </uix:NCheckState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ContinueOnError="False" DelayBefore="1" DelayBetweenKeys="0.1" DisplayName="Escribe la Cantidad" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,254" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Text="[vCantidad]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" CvElementArea="1216, 597, 145, 31" CvType="InputBox" DesignTimeRectangle="1218, 598, 143, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl id='lineaQ' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl id='lineaQ' type='text' tag='INPUT' class='form-control z-input input-sm ng-untouched ng-valid ng-valid-maxlength ng-dirty ng-valid-parse ng-not-empty' aaname='' /&gt;" Guid="59bc6455-d3db-4001-a044-2d847c7c7bd3" InformativeScreenshot="5be2287a94b194ade473f3c91c5d66f6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -592,7 +620,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="None" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="1" DelayBetweenKeys="0.1" DeselectAfter="{x:Null}" DisplayName="Escribe el Precio" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,254" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" SecureText="{x:Null}" Text="[vPrecio]" Timeout="{x:Null}" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="1" DelayBetweenKeys="0.1" DisplayName="Escribe el Precio" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,254" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Text="[vPrecio]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="984, 498, 97, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'0,00'" FullSelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl id='lineaUnitario' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl id='lineaUnitario' type='text' tag='INPUT' class='form-control z-input input-sm ng-pristine ng-valid ng-not-empty ng-touched' aaname='' /&gt;" Guid="b20573e4-e35e-495c-8675-51e025658897" ImageBase64="" InformativeScreenshot="14078ddf6477a37324d55821e5f4d9d6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -619,7 +647,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="Smooth" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_63" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_63" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="1867, 554, 8, 13" DesignTimeScaleFactor="1" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl parentid='cargarArtGrilla' tableRow='2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl parentid='cargarArtGrilla' type='' tag='I' class='fa fa-level-down ng-scope' aaname='' /&gt;" Guid="701ff6ed-5e24-4245-a9bc-25ec3e534883" ImageBase64="" InformativeScreenshot="f1a553b71d8d1708a955e5e5c0f781f9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
@@ -634,7 +662,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayBetweenShortcuts="{x:Null}" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1520,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Shortcuts="[d(hk)][k(PgDn)][u(hk)][d(hk)][k(pgdn)][u(hk)]" ShortcutsArgument="{x:Null}" Timeout="{x:Null}" Version="V3" />
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1520,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Shortcuts="[d(hk)][k(PgDn)][u(hk)][d(hk)][k(pgdn)][u(hk)]" Version="V3" />
             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1520,25" sap2010:WorkflowViewState.IdRef="CommentOut_6">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,196" sap2010:WorkflowViewState.IdRef="Sequence_38">
@@ -653,12 +681,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="1" DisplayName="Click 'Grabar'" sap:VirtualizedContainerService.HintSize="1520,157" sap2010:WorkflowViewState.IdRef="NClick_23" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'Grabar'" sap:VirtualizedContainerService.HintSize="1520,157" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="934, 672, 403, 28" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Grabar'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='*' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl tableRow='*' tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='factContent' tag='TABLE' /&gt;&lt;webctrl class='btn btn-primary z-button full-width ng-binding' tag='BUTTON' type='submit' aaname='                                                 Grabar                                                                                                      $  871,15                                                                                              ' /&gt;" Guid="757b27ba-0c39-4e2f-8d21-8dd399e547d6" ImageBase64="" InformativeScreenshot="7cdc3a563450a100789aef6e19f3b7c6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="2" DelayBefore="{x:Null}" DisplayName="Click 'Sí' Confirmar Factura" sap:VirtualizedContainerService.HintSize="1520,157" sap2010:WorkflowViewState.IdRef="NClick_24" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DisplayName="Click 'Sí' Confirmar Factura" sap:VirtualizedContainerService.HintSize="1520,157" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="1642, 410, 75, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Sí'" FullSelectorArgument="&lt;webctrl aaname='Sí' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sí' tag='BUTTON' type='' class='btn z-button btn-small ng-binding btn-primary' check:innerText='Sí' /&gt;" Guid="7e7984b7-05e9-4bad-8668-67d6cafe2395" InformativeScreenshot="44bf1569da2618533388f1399cc217ad.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -669,7 +697,7 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Comprobar el estado de la aplicación 'Aparecio el Boton Imprmir'" Exists="{x:Null}" sap:VirtualizedContainerService.HintSize="1520,884" sap2010:WorkflowViewState.IdRef="NCheckState_12" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" Result="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="15" Version="V3">
+            <uix:NCheckState DisplayName="Comprobar el estado de la aplicación 'Aparecio el Boton Imprmir'" sap:VirtualizedContainerService.HintSize="1520,884" sap2010:WorkflowViewState.IdRef="NCheckState_12" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="15" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="El objetivo aparece." sap:VirtualizedContainerService.HintSize="450,205" sap2010:WorkflowViewState.IdRef="Sequence_66">
                   <sap:WorkflowViewStateService.ViewState>
@@ -677,7 +705,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Aparecio el Boton Imprimir " TextWriter="{x:Null}" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Aparecio el Boton Imprimir " />
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
@@ -687,7 +715,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Comprobar el estado de la aplicación 'Imprimir'" Exists="{x:Null}" sap:VirtualizedContainerService.HintSize="954,552" sap2010:WorkflowViewState.IdRef="NCheckState_13" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" Result="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="3" Version="V3">
+                  <uix:NCheckState DisplayName="Comprobar el estado de la aplicación 'Imprimir'" sap:VirtualizedContainerService.HintSize="954,552" sap2010:WorkflowViewState.IdRef="NCheckState_13" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="3" Version="V3">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="El objetivo aparece." sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_68">
                         <sap:WorkflowViewStateService.ViewState>
@@ -704,7 +732,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_48" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_48" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="942, 261, 28, 28" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;button' parentid='main-content' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl class='btn btn-grey z-button btn-square dropdown-toggle' parentid='main-content' tag='BUTTON' type='button' aaname='' /&gt;" Guid="9bdde603-a60f-436e-9b2c-b1a3af34ffbc" InformativeScreenshot="bb49b3ddd599f42a7fbc6545f5f9724e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -721,7 +749,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="2" DisplayName="Click 'eT VCdo A-139055  #33083'" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_49" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="2" DisplayName="Click 'eT VCdo A-139055  #33083'" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_49" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="942, 244, 216, 49" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'eT VCdo A-139055  #33083'" FullSelectorArgument="&lt;webctrl ng-click='setComprobanteCargado(item)' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='eT VCdo A-139055  #33083' parentid='main-content' tag='SPAN' type='' class='z-link ng-binding' check:innerText='eT VCdo A-139055  #33083' /&gt;" Guid="de58310b-e87b-4610-bb1b-536e5bf79485" ImageBase64="" InformativeScreenshot="17140eccd7e4b3d38c444305c6ece27b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                           </uix:NClick.Target>
@@ -732,7 +760,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'Reimprimir'" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_50" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reimprimir'" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_50" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="352, 209, 116, 28" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Reimprimir'" FullSelectorArgument="&lt;webctrl aaname='                     Reimprimir                 ' parentid='main-content' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                     Reimprimir                 ' parentid='main-content' tag='BUTTON' type='button' class='btn z-button btn-small ng-scope' check:innerText='Reimprimir' /&gt;" Guid="97871aac-c011-4396-8d20-a74eadbbc0ca" InformativeScreenshot="fcc06980a98e2372118de36f0912d475.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -749,7 +777,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="3" DelayBefore="{x:Null}" DisplayName="Click 'Nuevo'" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_51" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="3" DisplayName="Click 'Nuevo'" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_51" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" CvTextArea="294, 265, 40, 12" CvTextArgument="Nuevo" CvType="Text" DesignTimeRectangle="265, 257, 84, 28" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Nuevo'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='BUTTON' type='button' class='btn z-button btn-small' aaname='                     Nuevo                 ' check:innerText='Nuevo' /&gt;" Guid="85b032c6-f67b-4beb-beda-91fc3179f0cb" InformativeScreenshot="66ba56336156686695411fe09011252d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -784,12 +812,12 @@
                 <uix:TargetAnchorable DesignTimeRectangle="991, 651, 84, 36" DesignTimeScaleFactor="1" FriendlyName="'grouping'" FullSelectorArgument="&lt;ctrl name='Zureo Gestión Online | Ingreso de comprobantes' role='document' /&gt;&lt;ctrl name='Imprimir' role='push button' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Zureo Gestión Online | Ingreso de comprobantes' role='document' /&gt;&lt;ctrl name='Imprimir' role='push button' /&gt;&lt;ctrl role='grouping' automationid='' /&gt;" Guid="5706587b-6b7f-4e0a-9a99-643fb77a2da1" InformativeScreenshot="5c46714be737d49c50e2a4c2deaa8cfd.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Zureo Gestión Online | Ingreso de comprobantes - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="1" DelayBefore="1" DisplayName="Click 'Boton Imprimir'" sap:VirtualizedContainerService.HintSize="1520,157" sap2010:WorkflowViewState.IdRef="NClick_55" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DelayBefore="1" DisplayName="Click 'Boton Imprimir'" sap:VirtualizedContainerService.HintSize="1520,157" sap2010:WorkflowViewState.IdRef="NClick_55" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="991, 651, 84, 36" DesignTimeScaleFactor="1" FriendlyName="'grouping'" FullSelectorArgument="&lt;ctrl name='Zureo Gestión Online | Ingreso de comprobantes' role='document' /&gt;&lt;ctrl name='Imprimir' role='push button' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Zureo Gestión Online | Ingreso de comprobantes' role='document' /&gt;&lt;ctrl name='Imprimir' role='push button' /&gt;&lt;ctrl role='grouping' automationid='' /&gt;" Guid="88b09f5c-cdcc-4b40-9faf-bbfcb0811131" InformativeScreenshot="ae07f57b32d1c91e6d2e26714c0f0293.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Zureo Gestión Online | Ingreso de comprobantes - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="None" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="0.1" DeselectAfter="{x:Null}" DisplayName="Escribe la ruta donde se guardara la Factura" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1520,218" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="Simulate" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" SecureText="{x:Null}" Text="[&quot;C:\Users\Everest fac\Documents\UiPath\Extract Orders Mercadolibre\Factura\&quot;+vOrden+&quot;.pdf&quot;]" Timeout="{x:Null}" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="0.1" DisplayName="Escribe la ruta donde se guardara la Factura" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1520,218" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="Simulate" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Text="[&quot;C:\Users\Everest fac\Documents\UiPath\Extract Orders Mercadolibre\Factura\&quot;+vOrden+&quot;.pdf&quot;]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable CvElementArea="195, 535, 986, 36" CvType="InputBox" DesignTimeRectangle="202, 541, 950, 27" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="5e0ac70e-fceb-4cb7-accd-1ad956b6c269" InformativeScreenshot="8980f1f03ffadfe5dbf9254c5ef28166.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar impresión como' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -800,7 +828,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="1" DelayBefore="1" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="1520,157" sap2010:WorkflowViewState.IdRef="NClick_26" InScope="{x:Null}" InUiElement="{x:Null}" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Timeout="{x:Null}" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DelayBefore="1" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="1520,157" sap2010:WorkflowViewState.IdRef="NClick_26" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a189f570-9879-4dac-a3e5-edd6cfccbadd" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable CvElementArea="879, 651, 133, 39" CvTextArea="911, 661, 67, 18" CvTextArgument="Guardar" CvType="Button" DesignTimeRectangle="881, 652, 132, 39" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' check:text='unchecked' /&gt;" Guid="dfca9851-abdc-4241-b8b5-d641596df3f0" InformativeScreenshot="af90980ccda328a028a291cb61964158.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar impresión como' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>

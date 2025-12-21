@@ -118,7 +118,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Real State Bot Mercadolibre " sap:VirtualizedContainerService.HintSize="926,748" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Real State Bot Mercadolibre " sap:VirtualizedContainerService.HintSize="935,671" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="vOrders" />
       <Variable x:TypeArguments="x:Int32" Name="vOrdersCount" />
@@ -129,14 +129,14 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="864,637" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="600,648" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <av:Point x:Key="ShapeLocation">30,72.66666666666666</av:Point>
-          <av:Size x:Key="ShapeSize">60,75</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">90,110.16666666666666 120,110.16666666666666 120,116.5 290,116.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">50,50</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">80,97.66666666666666 110,97.66666666666666 110,103 290,103</av:PointCollection>
           <x:Double x:Key="Width">830</x:Double>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -147,11 +147,12 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">290,68</av:Point>
-            <av:Size x:Key="ShapeSize">200,97</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">390,165 390,195 150,195 150,239.49999999999997</av:PointCollection>
+            <av:Size x:Key="ShapeSize">110,70</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">345,138 345,274.5 160,274.5</av:PointCollection>
+            <av:Point x:Key="AnnotationLocation">370,0</av:Point>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="escanea las ordenes de ML y obtiene las ordenes y el numero de ordenes&#xA;" DisplayName="Buscar Ordenes" sap:VirtualizedContainerService.HintSize="200,97" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="reusable\Escaneo Ordenes.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="escanea las ordenes de ML y obtiene las ordenes y el numero de ordenes&#xA;" DisplayName="Buscar Ordenes" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="reusable\Escaneo Ordenes.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_ArgumentoOrders">[vOrders]</OutArgument>
             <OutArgument x:TypeArguments="x:Int32" x:Key="out_ArgumentoOrdersCount">[vOrdersCount]</OutArgument>
@@ -169,11 +170,12 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">50,239.49999999999997</av:Point>
-                <av:Size x:Key="ShapeSize">200,97</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">150,336.5 150,417.5</av:PointCollection>
+                <av:Size x:Key="ShapeSize">110,70</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">105,309.5 105,417.5</av:PointCollection>
+                <av:Point x:Key="AnnotationLocation">130,170</av:Point>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Extrae los detalles de cada una de las ordenes y los guarda en la carpeta &quot;Ordenes por procesar&quot;" DisplayName="Procesamiento de Detalles.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,97" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="reusable\Procesamiento de Detalles.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Extrae los detalles de cada una de las ordenes y los guarda en la carpeta &quot;Ordenes por procesar&quot;" DisplayName="Procesamiento de Detalles.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="reusable\Procesamiento de Detalles.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:InvokeWorkflowFile.Arguments>
@@ -189,11 +191,12 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">50,417.5</av:Point>
-                    <av:Size x:Key="ShapeSize">200,82</av:Size>
-                    <av:PointCollection x:Key="ConnectorLocation">250,458.5 590,458.5 590,332.5</av:PointCollection>
+                    <av:Size x:Key="ShapeSize">110,70</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">160,452.5 450,452.5 450,342.5 490,342.5</av:PointCollection>
+                    <av:Point x:Key="AnnotationLocation">130,350</av:Point>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Itera la carpeta &quot;Ordenes por Procesar&quot;&#xA;" DisplayName="Procesamiento Facturas.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="reusable\Procesamiento de Facturas.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Itera la carpeta &quot;Ordenes por Procesar&quot;&#xA;" DisplayName="Procesamiento Facturas.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="reusable\Procesamiento de Facturas.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:InvokeWorkflowFile.Arguments>
@@ -209,11 +212,11 @@
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">490,307.5</av:Point>
-                        <av:Size x:Key="ShapeSize">200,25</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">590,307.5 590,277.5 580,277.5 580,272.5</av:PointCollection>
+                        <av:Size x:Key="ShapeSize">110,70</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">545,307.5 535,307.5 535,317.5</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Este Robot espera 30 min para volver a escanear Ordenes&quot;]">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Este Robot espera 30 min para volver a escanear Ordenes&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -225,11 +228,11 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">480,247.5</av:Point>
-                            <av:Size x:Key="ShapeSize">200,25</av:Size>
-                            <av:PointCollection x:Key="ConnectorLocation">580,247.5 580,116.5 490,116.5</av:PointCollection>
+                            <av:Size x:Key="ShapeSize">110,70</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">480,282.5 450,282.5 450,103 400,103</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Delay DisplayName="Esperar 10 minutos" Duration="00:30:00" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Delay_2">
+                        <Delay DisplayName="Esperar 10 minutos" Duration="00:30:00" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Delay_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

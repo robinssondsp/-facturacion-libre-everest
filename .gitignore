@@ -1,2 +1,6 @@
 Detalles/
 Factura/
+# UiPath locales
+.local/
+.settings/
+.project/PackageBindingsMetadata.json

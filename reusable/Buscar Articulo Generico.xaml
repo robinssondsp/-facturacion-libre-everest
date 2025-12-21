@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>888,1406</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>795,1449</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Buscar_Articulo_Generico_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -48,11 +48,21 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
@@ -61,47 +71,39 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Buscar_Articulo_Generico" sap:VirtualizedContainerService.HintSize="546,1341" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Buscar_Articulo_Generico" sap:VirtualizedContainerService.HintSize="524,1384" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="vNombre" />
     </Sequence.Variables>
@@ -110,7 +112,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="484,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="462,113" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[vNombre]</OutArgument>
       </Assign.To>
@@ -118,21 +120,21 @@
         <InArgument x:TypeArguments="x:String">[in_ArgumentoNombre]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Zureo Gestión Online | Ingreso de comprobantes" sap:VirtualizedContainerService.HintSize="484,1108" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="a95ed734-a0e6-4572-8f47-f562ff553d50" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Zureo Gestión Online | Ingreso de comprobantes" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="462,1183" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="a95ed734-a0e6-4572-8f47-f562ff553d50" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,851" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="416,943" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'Boton Buscar Articulo" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'Boton Buscar Articulo" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="534, 553, 13, 13" DesignTimeScaleFactor="1" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl type='' tag='I' class='fas fa-binoculars' aaname='' /&gt;" Guid="9160d22f-b957-4509-99dc-a6ec9e353a3b" InformativeScreenshot="ada9af57c45beb580ec7e4984909793f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="534, 553, 13, 13" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl type='' tag='I' class='fas fa-binoculars' aaname='' /&gt;" Guid="9160d22f-b957-4509-99dc-a6ec9e353a3b" InformativeScreenshot="ada9af57c45beb580ec7e4984909793f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -141,12 +143,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="1" DisplayName="Escribir El codigo Generico" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Text="1234" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="1" DisplayName="Escribir El codigo Generico" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Text="1234" Version="V3">
               <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" CvElementArea="1000, 342, 554, 45" CvType="InputBox" DesignTimeRectangle="1000, 344, 543, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control z-input ng-pristine ng-valid ng-empty ng-touched' aaname='' /&gt;" Guid="e270fe10-463c-41e9-83db-7b28fd933237" InformativeScreenshot="2b93bd305e9998a489819bacd143dcc9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" CvElementArea="1000, 342, 554, 45" CvType="InputBox" DesignTimeRectangle="1000, 344, 543, 42" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control z-input ng-pristine ng-valid ng-empty ng-touched' aaname='' /&gt;" Guid="e270fe10-463c-41e9-83db-7b28fd933237" InformativeScreenshot="2b93bd305e9998a489819bacd143dcc9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CvTextArea="686, 356, 259, 19" CvTextArgument="Buscar por codigo y nombre" CvType="Text" DesignTimeRectangle="663, 344, 338, 42" ElementType="DropDown" FriendlyName="'Buscar por'" FullSelectorArgument="&lt;webctrl id='tipoBusq' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tipoBusq' tag='SELECT' type='' class='form-control z-select ng-pristine ng-untouched ng-valid ng-not-empty' aaname='' /&gt;" SearchSteps="FuzzySelector, CV" />
+                      <uix:Target CvTextArea="686, 356, 259, 19" CvTextArgument="Buscar por codigo y nombre" CvType="Text" DesignTimeRectangle="663, 344, 338, 42" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='tipoBusq' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tipoBusq' tag='SELECT' type='' class='form-control z-select ng-pristine ng-untouched ng-valid ng-not-empty' aaname='' /&gt;" Guid="34a8dadd-16b4-42f7-96e4-44f47989271e" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -158,12 +160,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Boton Buscar" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Boton Buscar" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="1540, 344, 42, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl type='button' tag='BUTTON' class='btn btn-grey z-button btn-square pull-right' aaname='' /&gt;" Guid="d5f3f041-0152-4295-9fd8-8a4623f4ea14" InformativeScreenshot="28715241f24bd4b32005e5dd638e4ca4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="1540, 344, 42, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl type='button' tag='BUTTON' class='btn btn-grey z-button btn-square pull-right' aaname='' /&gt;" Guid="d5f3f041-0152-4295-9fd8-8a4623f4ea14" InformativeScreenshot="28715241f24bd4b32005e5dd638e4ca4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CvTextArea="686, 356, 259, 19" CvTextArgument="Buscar por codigo y nombre" CvType="Text" DesignTimeRectangle="663, 344, 338, 42" ElementType="DropDown" FriendlyName="'Buscar por'" FullSelectorArgument="&lt;webctrl id='tipoBusq' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tipoBusq' tag='SELECT' type='' class='form-control z-select ng-pristine ng-untouched ng-valid ng-not-empty' aaname='' /&gt;" SearchSteps="FuzzySelector, CV" />
+                      <uix:Target CvTextArea="686, 356, 259, 19" CvTextArgument="Buscar por codigo y nombre" CvType="Text" DesignTimeRectangle="663, 344, 338, 42" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='tipoBusq' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tipoBusq' tag='SELECT' type='' class='form-control z-select ng-pristine ng-untouched ng-valid ng-not-empty' aaname='' /&gt;" Guid="759be16b-14a7-4b55-95d0-60e84a8dda28" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -175,23 +177,29 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '(1234) MercadoLibre'" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '(1234) MercadoLibre'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" CvTextArea="704, 453, 162, 19" CvTextArgument="(1234) MercadoLibre" CvType="Text" DesignTimeRectangle="708, 450, 158, 23" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'(1234) MercadoLibre'" FullSelectorArgument="&lt;webctrl id='dxGridContainer_302' tag='TABLE' /&gt;&lt;webctrl aaname='(1234) MercadoLibre ' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dxGridContainer_302' tag='TABLE' /&gt;&lt;webctrl aaname='(1234) MercadoLibre ' type='' tag='SPAN' class='' check:innerText='(1234) MercadoLibre' /&gt;" Guid="68e09b6c-8878-4827-8e88-59888b910f06" InformativeScreenshot="d7c3460c66897fc630693b981a0a04e9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" CVScreenId="85440731-2d5b-4d20-8534-3eadafa99c8f" CvTextArea="340, 339, 96, 12" CvTextArgument="(1234) MercadoLibre" CvType="Text" DesignTimeRectangle="341, 337, 95, 14" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl id='dxGridContainer_315' tag='TABLE' /&gt;&lt;webctrl aaname='(1234) MercadoLibre ' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dxGridContainer_315' tag='TABLE' /&gt;&lt;webctrl aaname='(1234) MercadoLibre ' type='' tag='SPAN' class='' check:innerText='(1234) MercadoLibre' /&gt;" Guid="b365d7ea-7b40-455c-bdbc-d040ac1640c0" InformativeScreenshot="b9ce504b06e6abaeb0cb733d4b395fb2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="85440731-2d5b-4d20-8534-3eadafa99c8f" CvTextArea="340, 314, 39, 11" CvTextArgument="Articulo" CvType="Text" DesignTimeRectangle="335, 308, 463, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='dxGridContainer_315' tag='TABLE' /&gt;&lt;webctrl aaname=' Artículo  ' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dxGridContainer_315' tag='TABLE' /&gt;&lt;webctrl aaname=' Artículo  ' type='' tag='TH' class='z-column-header articulo' check:innerText='Artículo' /&gt;" Guid="23cccde1-0c83-418b-82b4-405af55a0711" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
               </uix:NClick.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Click 'Boton Seleccionar'" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Click 'Boton Seleccionar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" CvElementArea="1790, 867, 154, 46" CvTextArea="1812, 878, 108, 21" CvTextArgument="Seleccionar" CvType="Button" DesignTimeRectangle="1792, 868, 151, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Seleccionar'" FullSelectorArgument="&lt;webctrl aaname='Seleccionar' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Seleccionar' tag='BUTTON' type='button' class='btn z-btn btn-primary btn-small' check:innerText='Seleccionar' /&gt;" Guid="3ec88fda-e026-472b-95a0-4cd58e3e5e6f" InformativeScreenshot="6fffacda63de42584d5ea40f9cda7a68.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" CvElementArea="1790, 867, 154, 46" CvTextArea="1812, 878, 108, 21" CvTextArgument="Seleccionar" CvType="Button" DesignTimeRectangle="1792, 868, 151, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Seleccionar' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Seleccionar' tag='BUTTON' type='button' class='btn z-btn btn-primary btn-small' check:innerText='Seleccionar' /&gt;" Guid="3ec88fda-e026-472b-95a0-4cd58e3e5e6f" InformativeScreenshot="6fffacda63de42584d5ea40f9cda7a68.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CvElementArea="1651, 867, 131, 46" CvTextArea="1674, 879, 82, 19" CvTextArgument="Cancelar" CvType="Button" DesignTimeRectangle="1654, 868, 126, 42" ElementType="Button" FriendlyName="'Cancelar'" FullSelectorArgument="&lt;webctrl aaname='Cancelar' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cancelar' tag='BUTTON' type='button' class='btn z-btn btn-default btn-small' check:innerText='Cancelar' /&gt;" SearchSteps="FuzzySelector, CV" />
+                      <uix:Target CvElementArea="1651, 867, 131, 46" CvTextArea="1674, 879, 82, 19" CvTextArgument="Cancelar" CvType="Button" DesignTimeRectangle="1654, 868, 126, 42" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Cancelar' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cancelar' tag='BUTTON' type='button' class='btn z-btn btn-default btn-small' check:innerText='Cancelar' /&gt;" Guid="cb3583a1-e3f1-4668-b08e-9553a279b447" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -203,12 +211,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="1" DelayBetweenKeys="0.1" DisplayName="Type Into 'Comentario del artículo'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Text="[vNombre]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="1" DelayBetweenKeys="0.1" DisplayName="Type Into 'Comentario del artículo'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,243" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="a95ed734-a0e6-4572-8f47-f562ff553d50" Text="[vNombre]" Version="V3">
               <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="821, 546, 380, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT lineaComm'" FullSelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl id='lineaComm' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl id='lineaComm' type='text' tag='INPUT' class='form-control z-input input-sm ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched' aaname='' /&gt;" Guid="6c6ca2e3-ea7a-47b8-ad11-782d901da2f6" InformativeScreenshot="7580f9d5e221c5c68e2824c02b0a0e7a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="821, 546, 380, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl id='lineaComm' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl id='lineaComm' type='text' tag='INPUT' class='form-control z-input input-sm ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched' aaname='' /&gt;" Guid="6c6ca2e3-ea7a-47b8-ad11-782d901da2f6" InformativeScreenshot="7580f9d5e221c5c68e2824c02b0a0e7a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target DesignTimeRectangle="813, 515, 396, 22" ElementType="Text" FriendlyName="'Comentario del artículo'" FullSelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl aaname='Comentario del artículo' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl aaname='Comentario del artículo' type='' tag='TH' class='' check:innerText='Comentario del artículo' /&gt;" SearchSteps="FuzzySelector" />
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="813, 515, 396, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl aaname='Comentario del artículo' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Artículo Comentario del artículo Cantidad Unitario Dto. Subtotal' parentid='factContent' tag='TABLE' /&gt;&lt;webctrl aaname='Comentario del artículo' type='' tag='TH' class='' check:innerText='Comentario del artículo' /&gt;" Guid="cd8f750c-d431-454d-855d-08b09e46c656" SearchSteps="FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -218,7 +226,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG0SURBVDhPpVNtK4NRGN7f8UX5tA+SDyNhjZWmvM5Lmmgtb8NeMNNM0hSf+AfKF6WUlyRSKCVhbCMMJaOZPZvtuTz3va15yoc1V92dcz3nOte5z/3cR9FnaIN9yATHSD8mcgzS0p7+7g4oJi2DyBeusREopmxmJqIociSTSSQS31IkeBQlLi2wJgPSEdwT1qwBgcU5IGtgkWdACPiusTDrgm3AiJlJO+6vziE+BTizzAF/GhBOT45QpixEd0s9lhc9mHbYELg4g/gaTCvSm2UG1qyBsbMZrXXqNJPDf+3F3a2f57IMnNYhJkI0ihpVMebdThbEYjE8Bx/xHnrDrNMOvU6DJm0llhY8rCfIDGKCAG15CWakyhLIpLe9CZa+XuiqVQg+PuD48AC10iGCEGXN9PiovAbDRgPUpUq8PKXu3KNvADVag6ZCykiAz3vFWX5FIrwuM6ATb7yX0FWp2MTQrENpUQEW59wwS8amrlZ0NdbBMTrAesKfv/EzHMbezibWVlewv7uNj/cQIp9h5lsb64jH4/Ii/r7C/xtJChpTbZwK4r+/ZTiBW/nfj4mqPJb3c+7AD4amUqYePGfhAAAAAElFTkSuQmCC" InformativeScreenshot="134bf89bbac05bba82a11c5fcd1ac0a0.jpg" Selector="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" Title="Zureo Gestión Online | Ingreso de comprobantes" Url="https://go.zureo.com/#/ingresocomprobantes/" />
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG0SURBVDhPpVNtK4NRGN7f8UX5tA+SDyNhjZWmvM5Lmmgtb8NeMNNM0hSf+AfKF6WUlyRSKCVhbCMMJaOZPZvtuTz3va15yoc1V92dcz3nOte5z/3cR9FnaIN9yATHSD8mcgzS0p7+7g4oJi2DyBeusREopmxmJqIociSTSSQS31IkeBQlLi2wJgPSEdwT1qwBgcU5IGtgkWdACPiusTDrgm3AiJlJO+6vziE+BTizzAF/GhBOT45QpixEd0s9lhc9mHbYELg4g/gaTCvSm2UG1qyBsbMZrXXqNJPDf+3F3a2f57IMnNYhJkI0ihpVMebdThbEYjE8Bx/xHnrDrNMOvU6DJm0llhY8rCfIDGKCAG15CWakyhLIpLe9CZa+XuiqVQg+PuD48AC10iGCEGXN9PiovAbDRgPUpUq8PKXu3KNvADVag6ZCykiAz3vFWX5FIrwuM6ATb7yX0FWp2MTQrENpUQEW59wwS8amrlZ0NdbBMTrAesKfv/EzHMbezibWVlewv7uNj/cQIp9h5lsb64jH4/Ii/r7C/xtJChpTbZwK4r+/ZTiBW/nfj4mqPJb3c+7AD4amUqYePGfhAAAAAElFTkSuQmCC" InformativeScreenshot="134bf89bbac05bba82a11c5fcd1ac0a0.jpg" Selector="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" Url="https://go.zureo.com/#/ingresocomprobantes/" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

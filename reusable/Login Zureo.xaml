@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Login_Zureo" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1834,3070" sap2010:WorkflowViewState.IdRef="Login_Zureo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_Zureo" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1226,2026" sap2010:WorkflowViewState.IdRef="Login_Zureo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -38,6 +38,8 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -51,6 +53,7 @@
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
@@ -65,8 +68,8 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -86,7 +89,6 @@
       <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
@@ -100,188 +102,141 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1844,3005" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap:VirtualizedContainerService.HintSize="1090,2288" sap2010:WorkflowViewState.IdRef="Sequence_14">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Login_Zureo" sap:VirtualizedContainerService.HintSize="1782,2894" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence DisplayName="Login_Zureo" sap:VirtualizedContainerService.HintSize="1090,2265" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Default="219263040015" Name="strCompanyCode" />
         <Variable x:TypeArguments="x:String" Default="Everestshopping24@gmail.com" Name="strEmail" />
-        <Variable x:TypeArguments="x:String" Default="Everest2023++**" Name="Password" />
+        <Variable x:TypeArguments="x:String" Name="Password">
+          <Variable.Default>
+            <Literal x:TypeArguments="x:String">Everest2025</Literal>
+          </Variable.Default>
+        </Variable>
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1720,2783" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5" RetryInterval="00:00:05">
-        <ui:RetryScope.ActivityBody>
-          <ActivityAction>
-            <Sequence DisplayName="Acción" sap:VirtualizedContainerService.HintSize="1678,2608" sap2010:WorkflowViewState.IdRef="Sequence_12">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: go.zureo.com/#/login" sap:VirtualizedContainerService.HintSize="1616,2497" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="6c5835d2-cfc5-415c-9030-53942f7c76f1" Version="V2" WindowResize="Maximize">
-                <uix:NApplicationCard.Body>
-                  <ActivityAction x:TypeArguments="x:Object">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1582,2240" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence DisplayName="Acción" sap:VirtualizedContainerService.HintSize="1056,2182" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: go.zureo.com/#/login" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1594" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="6c5835d2-cfc5-415c-9030-53942f7c76f1" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,1304" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NCheckState DelayBefore="4" DisplayName="Comprobar el estado de la aplicación 'Ingrese con'" sap:VirtualizedContainerService.HintSize="954,1242" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Timeout="5" Version="V3">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="El objetivo aparece." sap:VirtualizedContainerService.HintSize="450,998" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NCheckState DisplayName="Comprobar el estado de la aplicación 'Ingrese con'" sap:VirtualizedContainerService.HintSize="1520,2125" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Timeout="20" Version="V3">
-                        <uix:NCheckState.IfExists>
-                          <Sequence DisplayName="El objetivo aparece." sap:VirtualizedContainerService.HintSize="1016,1908" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <uix:NCheckState DisplayName="Comprobar el estado de la aplicación 'Microtutorial'" sap:VirtualizedContainerService.HintSize="954,1263" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Timeout="3" Version="V3">
-                              <uix:NCheckState.IfExists>
-                                <Sequence DisplayName="El objetivo aparece." sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Sequence>
-                              </uix:NCheckState.IfExists>
-                              <uix:NCheckState.IfNotExists>
-                                <Sequence DisplayName="El objetivo no aparece." sap:VirtualizedContainerService.HintSize="450,1046" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="3" DisplayName="Type Into Codigo Compañia" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Text="[strCompanyCode]" Version="V3">
-                                    <uix:NTypeInto.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/login" CvElementArea="540, 403, 304, 37" CvType="InputBox" DesignTimeRectangle="541, 404, 300, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'219263040015'" FullSelectorArgument="&lt;webctrl id='empresaLogin' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='empresaLogin' tag='INPUT' type='text' class='form-control loginScreen ng-touched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required' aaname='' /&gt;" Guid="c30f83c0-5bb8-4b0a-b6b8-7ca6f7e23ac7" InformativeScreenshot="e2f7f3ecd106d7dc0bd606ac83b21ea6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/ingresocomprobantes/' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target CvTextArea="581, 378, 219, 16" CvTextArgument="Ingrese con su usuario y contrasena" CvType="Text" DesignTimeRectangle="541, 376, 300, 19" ElementType="Text" FriendlyName="'Ingrese con'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' aaname='Ingrese con su usuario y contraseña' check:innerText='Ingrese con su usuario y contraseña' /&gt;" SearchSteps="FuzzySelector, CV" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NTypeInto.Target>
-                                  </uix:NTypeInto>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT usuarioLogin'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Text="[strEmail]" Version="V3">
-                                    <uix:NTypeInto.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/login" CvElementArea="539, 451, 303, 37" CvType="InputBox" DesignTimeRectangle="541, 453, 300, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT usuarioLogin'" FullSelectorArgument="&lt;webctrl id='usuarioLogin' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='usuarioLogin' tag='INPUT' type='text' class='form-control loginScreen ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' aaname='' /&gt;" Guid="c770d586-243f-4fe2-a252-a0f96728acfe" InformativeScreenshot="5350c9e720e0d25f3c2cb073df3c89c4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/ingresocomprobantes/' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                    </uix:NTypeInto.Target>
-                                  </uix:NTypeInto>
-                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Text="Everest2023++**" Version="V3">
-                                    <uix:NTypeInto.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/login" CvElementArea="539, 500, 303, 37" CvType="InputBox" DesignTimeRectangle="541, 502, 300, 34" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'Everest852'" FullSelectorArgument="&lt;webctrl id='passwordLogin' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='passwordLogin' tag='INPUT' type='password' class='form-control loginScreen ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched' aaname='' /&gt;" Guid="db801e08-34a0-4c8a-b893-81b5f654916a" ImageBase64="" InformativeScreenshot="eb6690f37c155f8cb9975e772951c7a3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/ingresocomprobantes/' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target CvElementArea="538, 550, 304, 37" CvTextArea="672, 560, 37, 17" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="541, 551, 300, 34" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary block full-width m-b loginScreen' aaname='Login' check:innerText='Login' /&gt;" SearchSteps="FuzzySelector, CV" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NTypeInto.Target>
-                                  </uix:NTypeInto>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="3" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Version="V3">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/login" CvElementArea="538, 550, 304, 37" CvTextArea="672, 560, 37, 17" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="541, 551, 300, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary block full-width m-b loginScreen' aaname='Login' check:innerText='Login' /&gt;" Guid="51080955-5a43-4e9b-940f-5f175f23db9a" InformativeScreenshot="c732378182c5c1ee1103d271c48c939e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/ingresocomprobantes/' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                                    </uix:NClick.Target>
-                                  </uix:NClick>
-                                </Sequence>
-                              </uix:NCheckState.IfNotExists>
-                              <uix:NCheckState.Target>
-                                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/ingresocomprobantes/" DesignTimeRectangle="243, 195, 1094, 28" DesignTimeScaleFactor="1" FriendlyName="'Microtutorial'" FullSelectorArgument="&lt;webctrl parentid='qhIboxTitle' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='qhIboxTitle' tag='DIV' type='' class='ibox-tools z-ibox-tools' aaname='                                                                                  ' check:innerText='Microtutorial' /&gt;" Guid="fe25abfc-8b00-4ae0-8c5f-742e7bde2741" InformativeScreenshot="f71c4f0af168f4aab0c6ed6dbfe49b12.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
-                              </uix:NCheckState.Target>
-                            </uix:NCheckState>
-                            <uix:NCheckState DisplayName="Comprobar el estado de la aplicación 'Su sesión'" sap:VirtualizedContainerService.HintSize="954,490" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Timeout="1" Version="V3">
-                              <uix:NCheckState.IfExists>
-                                <Sequence DisplayName="El objetivo aparece." sap:VirtualizedContainerService.HintSize="450,273" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continuar'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Version="V3">
-                                    <uix:NClick.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/login" DesignTimeRectangle="1537, 566, 180, 42" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Continuar'" FullSelectorArgument="&lt;webctrl aaname='Continuar' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Continuar' tag='BUTTON' type='button' class='btn z-btn btn-primary' check:innerText='Continuar' /&gt;" Guid="af4f47a0-7f38-4621-bfcd-55412e0c343d" InformativeScreenshot="a756120b1b4fd32729a41680ac770128.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/login' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target DesignTimeRectangle="1344, 566, 180, 42" ElementType="Button" FriendlyName="'Cancelar'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn z-btn btn-default' aaname='Cancelar' check:innerText='Cancelar' /&gt;" SearchSteps="FuzzySelector" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NClick.Target>
-                                  </uix:NClick>
-                                </Sequence>
-                              </uix:NCheckState.IfExists>
-                              <uix:NCheckState.IfNotExists>
-                                <Sequence DisplayName="El objetivo no aparece." sap:VirtualizedContainerService.HintSize="450,106" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Sequence>
-                              </uix:NCheckState.IfNotExists>
-                              <uix:NCheckState.Target>
-                                <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/login" DesignTimeRectangle="889, 427, 806, 56" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Su sesión'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='ng-binding' aaname='Su sesión se encuentra activa en otro dispositivo/navegador. Si continúa se cerrará automáticamente dicha sesión' check:innerText='Su sesión se encuentra activa en otro dispositivo/navegador.&amp;#xD;&amp;#xA;Si continúa se cerrará automáticamente' /&gt;" Guid="fe023e4e-a7b7-437c-9191-a91d76c91bf9" ImageBase64="" InformativeScreenshot="92f510fc488eef00eaa55a6b2bfd73bf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/login' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target DesignTimeRectangle="866, 340, 851, 34" ElementType="Text" FriendlyName="'Atención'" FullSelectorArgument="&lt;webctrl tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='modal-title' aaname='Atención' check:innerText='Atención' /&gt;" SearchSteps="FuzzySelector" />
-                                    </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
-                              </uix:NCheckState.Target>
-                            </uix:NCheckState>
-                          </Sequence>
-                        </uix:NCheckState.IfExists>
-                        <uix:NCheckState.IfNotExists>
-                          <Sequence DisplayName="El objetivo no aparece." sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </Sequence>
-                        </uix:NCheckState.IfNotExists>
-                        <uix:NCheckState.Target>
-                          <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/login" DesignTimeRectangle="1065, 640, 450, 28" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Ingrese con'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' aaname='Ingrese con su usuario y contraseña' check:innerText='Ingrese con su usuario y contraseña' /&gt;" Guid="d77a9df8-77c0-4815-8de2-99c63b9c5b2f" InformativeScreenshot="2393f8ab3532ef0522b53ef8273e06c6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/ingresocomprobantes/' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                            <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                <uix:Target DesignTimeRectangle="1133, 510, 315, 108" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='img img-responsive' aaname='' /&gt;" SearchSteps="FuzzySelector" />
-                              </scg:List>
-                            </uix:TargetAnchorable.Anchors>
-                          </uix:TargetAnchorable>
-                        </uix:NCheckState.Target>
-                      </uix:NCheckState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="2" DisplayName="Escribir en 'INPUT empresaLogin'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,251" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Text="[strCompanyCode]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/login" CvElementArea="555, 376, 272, 32" CvType="InputBox" DesignTimeRectangle="556, 377, 270, 31" DesignTimeScaleFactor="0.8999999761581421" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='empresaLogin' tag='INPUT' placeholder='Código de empresa...' /&gt;" FuzzySelectorArgument="&lt;webctrl id='empresaLogin' tag='INPUT' placeholder='Código de empresa...' type='text' class='form-control loginScreen ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' aaname='' /&gt;" Guid="f74f8f0d-3938-4e79-bc18-2e03c0f0671e" InformativeScreenshot="36c7ce8eace5bdd24b9fa90e0fcb798c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/login' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="1" DisplayName="Escribir en 'INPUT usuarioLogin'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,251" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Text="[strEmail]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/login" CvElementArea="555, 420, 272, 32" CvType="InputBox" DesignTimeRectangle="556, 421, 270, 31" DesignTimeScaleFactor="0.8999999761581421" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='usuarioLogin' tag='INPUT' name='username' /&gt;" FuzzySelectorArgument="&lt;webctrl id='usuarioLogin' tag='INPUT' name='username' type='text' class='form-control loginScreen ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' aaname='' /&gt;" Guid="66d4958a-fa1d-4f46-b6c5-dc620d1556ba" InformativeScreenshot="22aa93c78799043505190e7fb07881ec.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/login' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="1" DelayBefore="1" DisplayName="Escribir en 'INPUT passwordLogin'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,251" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Text="[Password]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/login" CvElementArea="554, 463, 273, 33" CvType="InputBox" DesignTimeRectangle="556, 465, 270, 31" DesignTimeScaleFactor="0.8999999761581421" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='passwordLogin' tag='INPUT' name='password' /&gt;" FuzzySelectorArgument="&lt;webctrl id='passwordLogin' tag='INPUT' name='password' type='password' class='form-control loginScreen ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' aaname='' /&gt;" Guid="d818e953-1882-45af-88c0-78e1706f065b" InformativeScreenshot="beecc647fcd5fc8fd5ea694e9c673495.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/login' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="10" DisplayName="Clic 'Login'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,183" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://go.zureo.com/#/login" CvElementArea="555, 508, 273, 33" CvTextArea="674, 517, 34, 15" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="556, 509, 270, 31" DesignTimeScaleFactor="0.8999999761581421" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' innertext='Login' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' innertext='Login' type='submit' class='btn btn-primary block full-width m-b loginScreen' aaname='Login' check:text='Login' /&gt;" Guid="b4a0b7dd-bb41-408d-a81a-b56ccc581ca0" InformativeScreenshot="67394f39113da040ec8c6bdace6fabd6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/login' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NClick>
                     </Sequence>
-                  </ActivityAction>
-                </uix:NApplicationCard.Body>
-                <uix:NApplicationCard.TargetApp>
-                  <uix:TargetApp Area="-11, -11, 2582, 1042" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAG0SURBVDhPpVNtK4NRGN7f8UX5tA+SDyNhjZWmvM5Lmmgtb8NeMNNM0hSf+AfKF6WUlyRSKCVhbCMMJaOZPZvtuTz3va15yoc1V92dcz3nOte5z/3cR9FnaIN9yATHSD8mcgzS0p7+7g4oJi2DyBeusREopmxmJqIociSTSSQS31IkeBQlLi2wJgPSEdwT1qwBgcU5IGtgkWdACPiusTDrgm3AiJlJO+6vziE+BTizzAF/GhBOT45QpixEd0s9lhc9mHbYELg4g/gaTCvSm2UG1qyBsbMZrXXqNJPDf+3F3a2f57IMnNYhJkI0ihpVMebdThbEYjE8Bx/xHnrDrNMOvU6DJm0llhY8rCfIDGKCAG15CWakyhLIpLe9CZa+XuiqVQg+PuD48AC10iGCEGXN9PiovAbDRgPUpUq8PKXu3KNvADVag6ZCykiAz3vFWX5FIrwuM6ATb7yX0FWp2MTQrENpUQEW59wwS8amrlZ0NdbBMTrAesKfv/EzHMbezibWVlewv7uNj/cQIp9h5lsb64jH4/Ii/r7C/xtJChpTbZwK4r+/ZTiBW/nfj4mqPJb3c+7AD4amUqYePGfhAAAAAElFTkSuQmCC" InformativeScreenshot="578266cd79fd152860aa93d60aaeed80.jpg" Selector="&lt;html app='chrome.exe' title='go.zureo.com/#/login' /&gt;" Title="go.zureo.com/#/ingresocomprobantes/" Url="https://go.zureo.com/#/login" />
-                </uix:NApplicationCard.TargetApp>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </uix:NApplicationCard>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="El objetivo no aparece." sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:01" DisplayName="Bandeja de mensajes" sap:VirtualizedContainerService.HintSize="416,111" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;no&quot;]" />
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="go.zureo.com" CVScreenId="d50dac2c-679d-4b02-8807-75350c763b56" CvElementArea="902, 248, 40, 40" CvType="Button" DesignTimeRectangle="904, 250, 36, 36" DesignTimeScaleFactor="0.8999999761581421" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' tag='path' class='' aaname='' /&gt;" Guid="2856f807-bb38-44a5-846a-ee8d474eecaf" InformativeScreenshot="cd7bda916628dd9bd1821a066e48940a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='go.zureo.com/#/login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="d50dac2c-679d-4b02-8807-75350c763b56" CvTextArea="901, 329, 231, 20" CvTextArgument="Zureo Gestion Online" CvType="Text" DesignTimeRectangle="904, 325, 227, 29" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' tag='STRONG' class='' aaname='Zureo Gestión Online' check:innerText='Zureo Gestión Online' /&gt;" Guid="0699110c-f84c-40aa-92bd-a4cecc6c3cb2" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-11, -11, 2582, 1042" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAG0SURBVDhPpVNtK4NRGN7f8UX5tA+SDyNhjZWmvM5Lmmgtb8NeMNNM0hSf+AfKF6WUlyRSKCVhbCMMJaOZPZvtuTz3va15yoc1V92dcz3nOte5z/3cR9FnaIN9yATHSD8mcgzS0p7+7g4oJi2DyBeusREopmxmJqIociSTSSQS31IkeBQlLi2wJgPSEdwT1qwBgcU5IGtgkWdACPiusTDrgm3AiJlJO+6vziE+BTizzAF/GhBOT45QpixEd0s9lhc9mHbYELg4g/gaTCvSm2UG1qyBsbMZrXXqNJPDf+3F3a2f57IMnNYhJkI0ihpVMebdThbEYjE8Bx/xHnrDrNMOvU6DJm0llhY8rCfIDGKCAG15CWakyhLIpLe9CZa+XuiqVQg+PuD48AC10iGCEGXN9PiovAbDRgPUpUq8PKXu3KNvADVag6ZCykiAz3vFWX5FIrwuM6ATb7yX0FWp2MTQrENpUQEW59wwS8amrlZ0NdbBMTrAesKfv/EzHMbezibWVlewv7uNj/cQIp9h5lsb64jH4/Ii/r7C/xtJChpTbZwK4r+/ZTiBW/nfj4mqPJb3c+7AD4amUqYePGfhAAAAAElFTkSuQmCC" InformativeScreenshot="578266cd79fd152860aa93d60aaeed80.jpg" Selector="&lt;html app='chrome.exe' title='go.zureo.com/#/login' /&gt;" Url="https://go.zureo.com/#/login" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+        <uix:NCheckState DisplayName="Comprobar estado de aplicación 'Microtutorial'" sap:VirtualizedContainerService.HintSize="1022,505" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="6c5835d2-cfc5-415c-9030-53942f7c76f1" Version="V4">
+          <uix:NCheckState.IfExists>
+            <Sequence sap2010:Annotation.AnnotationText="genera un log de usuario logueado" DisplayName="Aparece el destino" sap:VirtualizedContainerService.HintSize="450,263" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Usuario Logueado&quot;]" />
             </Sequence>
-          </ActivityAction>
-        </ui:RetryScope.ActivityBody>
-        <ui:RetryScope.Condition>
-          <ActivityFunc x:TypeArguments="x:Boolean" />
-        </ui:RetryScope.Condition>
-      </ui:RetryScope>
+          </uix:NCheckState.IfExists>
+          <uix:NCheckState.IfNotExists>
+            <Sequence DisplayName="No aparece el destino" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Sequence>
+          </uix:NCheckState.IfNotExists>
+          <uix:NCheckState.Target>
+            <uix:TargetAnchorable BrowserURL="go.zureo.com" DesignTimeRectangle="220, 241, 1122, 25" DesignTimeScaleFactor="0.8999999761581421" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;query-head&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div' innertext='                                      Ingreso de comprobantes                                                                       Facturación / Ingreso de comprobantes                                                                                                                              Microtutorial                                                                                                                                                                   ' idx='1' /&gt;&lt;webctrl parentid='qhIboxTitle' tag='DIV' /&gt;" Guid="b2f411e9-b715-4b20-af08-1f102ef879c3" ImageBase64="" InformativeScreenshot="d601ed64c57cd1eae52c4618fa45fb9b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Zureo Gestión Online | Ingreso de comprobantes' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+          </uix:NCheckState.Target>
+        </uix:NCheckState>
+      </Sequence>
     </Sequence>
   </Sequence>
 </Activity>

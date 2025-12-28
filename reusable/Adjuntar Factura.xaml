@@ -31,8 +31,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
@@ -53,11 +51,12 @@
       <x:String>UiPath.Shared.Activities.Business</x:String>
       <x:String>System.Security</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -116,7 +115,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Adjuntar_Factura" sap:VirtualizedContainerService.HintSize="1238,2576" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Adjuntar_Factura" sap:VirtualizedContainerService.HintSize="1126,2753" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="vOrden" />
     </Sequence.Variables>
@@ -125,7 +124,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="1176,113" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap:VirtualizedContainerService.HintSize="1126,175" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[vOrden]</OutArgument>
       </Assign.To>
@@ -133,26 +132,33 @@
         <InArgument x:TypeArguments="x:String">[inArgumentoOrden]</InArgument>
       </Assign.Value>
     </Assign>
-    <Sequence DisplayName="Acción" sap:VirtualizedContainerService.HintSize="1176,2375" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1126,123" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;ADJUNTANDO FACTURA  &quot; + vOrden]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <Sequence DisplayName="Acción" sap:VirtualizedContainerService.HintSize="1126,2318" sap2010:WorkflowViewState.IdRef="Sequence_9">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Documentación fiscal" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1114,2264" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="WindowMessages" OpenMode="Always" ScopeGuid="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Version="V2" WebDriverMode="Disabled" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Documentación fiscal" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1092,2226" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="WindowMessages" OpenMode="Always" ScopeGuid="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Version="V2" WebDriverMode="Disabled" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="1080,2024" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence sap:VirtualizedContainerService.HintSize="1058,1981" sap2010:WorkflowViewState.IdRef="Sequence_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NCheckState DelayBefore="1" DisplayName="Comprobar el estado de la aplicación 'INPUT input-undefined'" sap:VirtualizedContainerService.HintSize="1018,1180" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Timeout="20" Version="V3">
+              <uix:NCheckState DelayBefore="1" DisplayName="Comprobar el estado de la aplicación 'INPUT input-undefined'" sap:VirtualizedContainerService.HintSize="1024,1189" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Timeout="20" Version="V3">
                 <uix:NCheckState.IfExists>
                   <Sequence DisplayName="El objetivo aparece." sap:VirtualizedContainerService.HintSize="450,931" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
@@ -160,12 +166,12 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'INPUT input-undefined'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'INPUT input-undefined'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.mercadolibre.com.uy/ventas/2000008408526238/documento-fiscal?callbackUrl=https%3A%2F%2Fwww.mercadolibre.com.uy%2Fventas%2Fomni%2Flistado%3Fplatform.id%3DML%26channel%3Dmarketplace%26filters%3D%26sort%3DDATE_CLOSED_DESC%26page%3D1%26search%3D%26startPeriod%3DWITH_DATE_CLOSED_1M_OLD%26toCurrent%3D%26fromCurrent%3D" DesignTimeRectangle="992, 462, 526, 96" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='input-undefined' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-undefined' tag='INPUT' type='file' class='andes-file-uploader__dropzone-input' aaname='Seleccionar archivos' /&gt;" Guid="caa2e50a-789f-4661-af8d-243665beb2e7" ImageBase64="" InformativeScreenshot="94ac9040ffd9f2ba7f247138aeac0378.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Documentación fiscal' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="2" DelayBetweenKeys="0.1" DisplayName="Type Into 'No&amp;mbre'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="388,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Text="[&quot;C:\Extract Orders Mercadolibre\Factura\&quot;+vOrden+&quot;.pdf&quot;]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="1" DelayBetweenKeys="0.1" DisplayName="Type Into 'No&amp;mbre'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,259" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Text="[&quot;C:\Extract Orders Mercadolibre\Factura\&quot;+vOrden+&quot;.pdf&quot;]" Timeout="180" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="194, 571, 225, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="e56f18f4-43c9-45c1-8887-7b2e35831826" InformativeScreenshot="e6e801068e7e92f5adff1440d98ccbfe.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -176,7 +182,7 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="" ClickType="Single" DelayBefore="1" DisplayName="Click 'Boton Abrir'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="388,220" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Version="V3">
+                    <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="" ClickType="Single" DelayBefore="1" DisplayName="Click 'Boton Abrir'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable CvElementArea="879, 651, 133, 39" CvTextArea="923, 661, 43, 18" CvTextArgument="Abrir" CvType="Button" DesignTimeRectangle="881, 652, 132, 39" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Abrir' check:text='unchecked' /&gt;" Guid="59dc17cf-2f0d-4d25-aeae-665ea833b06f" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -192,7 +198,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="1" DisplayName="Click 'Boton Adjuntar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="1" DisplayName="Click 'Boton Adjuntar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fee37433-9f46-4cc0-80cd-ccf8b76bee04" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.mercadolibre.com.uy/ventas/2000005989823777/documento-fiscal?callbackUrl=https%3A%2F%2Fwww.mercadolibre.com.uy%2Fventas%2Fomni%2Flistado%3Fplatform.id%3DML%26channel%3Dmarketplace%26filters%3D%26sort%3DDATE_CLOSED_DESC%26page%3D1%26search%3D%26startPeriod%3DWITH_DATE_CLOSED_1M_OLD%26toCurrent%3D%26fromCurrent%3D" CvElementArea="1112, 671, 104, 46" CvTextArea="1134, 687, 58, 16" CvTextArgument="Adjuntar" CvType="Button" DesignTimeRectangle="1113, 672, 100, 43" DesignTimeScaleFactor="0.8999999761581421" ElementType="Button" FullSelectorArgument="&lt;webctrl id=':Raha:' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id=':Raha:' tag='BUTTON' type='button' class='andes-button sc-button-wrapper andes-button--large andes-button--loud' aaname='Adjuntar' check:innerText='Adjuntar' /&gt;" Guid="a98facbb-dd33-4b05-8ab1-5867ec426f9f" InformativeScreenshot="afe44290fe9420a0f1f628d95318384d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Documentación fiscal' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -206,7 +212,7 @@
                   </Sequence>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.IfNotExists>
-                  <Sequence DisplayName="El objetivo no aparece." sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="El objetivo no aparece." sap:VirtualizedContainerService.HintSize="450,96" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -218,27 +224,27 @@
                   <uix:TargetAnchorable BrowserURL="https://www.mercadolibre.com.uy/ventas/2000007249625982/documento-fiscal?callbackUrl=https%3A%2F%2Fwww.mercadolibre.com.uy%2Fventas%2Fomni%2Flistado%3Fplatform.id%3DML%26channel%3Dmarketplace%26filters%3D%26sort%3DDATE_CLOSED_DESC%26page%3D1%26search%3D%26startPeriod%3DWITH_DATE_CLOSED_1M_OLD%26toCurrent%3D%26fromCurrent%3D" DesignTimeRectangle="711, 380, 473, 86" DesignTimeScaleFactor="0.8999999761581421" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='input-undefined' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-undefined' tag='INPUT' type='file' class='andes-file-uploader__dropzone-input' aaname='Seleccionar archivos' /&gt;" Guid="03292ec0-708d-42f8-86b1-9defae5c4f2d" ImageBase64="" InformativeScreenshot="ec03afa8c585d150a2cd669eaf4c334d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Documentación fiscal' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NCheckState.Target>
               </uix:NCheckState>
-              <uix:NCheckState DisplayName="Comprobar estado de aplicación 'Tu comprador'" sap:VirtualizedContainerService.HintSize="1018,754" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="30" Version="V3">
+              <uix:NCheckState DisplayName="Comprobar estado de aplicación 'Tu comprador'" sap:VirtualizedContainerService.HintSize="1024,726" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="30" Version="V3">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Aparece el destino" sap:VirtualizedContainerService.HintSize="514,512" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence DisplayName="Aparece el destino" sap:VirtualizedContainerService.HintSize="520,475" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="452,307" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="486,289" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                       <ui:CommentOut.Body>
-                        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="416,196" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:01" DisplayName="Bandeja de mensajes" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Factura Adjuntada&quot;]" TopMost="True" />
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:01" DisplayName="Bandeja de mensajes" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Factura Adjuntada&quot;]" TopMost="True" />
                         </Sequence>
                       </ui:CommentOut.Body>
                     </ui:CommentOut>
-                    <Delay DisplayName="Esperar 1 segundo" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="452,115" sap2010:WorkflowViewState.IdRef="Delay_1">
+                    <Delay DisplayName="Esperar 1 segundo" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="486,120" sap2010:WorkflowViewState.IdRef="Delay_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -248,7 +254,7 @@
                   </Sequence>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.IfNotExists>
-                  <Sequence DisplayName="No aparece el destino" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence DisplayName="No aparece el destino" sap:VirtualizedContainerService.HintSize="450,96" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -274,5 +280,12 @@
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
     </Sequence>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1126,114" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;FACTURA ADJUNTADA &quot; + vOrden]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
   </Sequence>
 </Activity>

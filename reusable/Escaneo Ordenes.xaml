@@ -32,8 +32,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Xml.Serialization</x:String>
@@ -53,6 +51,9 @@
       <x:String>BalaReva.EasyDataTable</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -126,7 +127,7 @@
       <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Scan_ML_Orders" sap:VirtualizedContainerService.HintSize="1096,3666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Scan_ML_Orders" sap:VirtualizedContainerService.HintSize="638,2909" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="vHasta" />
       <Variable x:TypeArguments="x:String" Name="vDesde" />
@@ -146,7 +147,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Obtener la fecha de hoy&#xA;Dim today As DateTime = DateTime.Today&#xA;' Obtener la fecha de ayer&#xA;Dim yesterday As DateTime = today.AddDays(-5)&#xA;&#xA;' Formatear las fechas al formato yyyy-MM-dd&#xA;vHasta = today.ToString(&quot;yyyy-MM-dd&quot;)&#xA;vDesde = yesterday.ToString(&quot;yyyy-MM-dd&quot;)" DisplayName="Obtener la fecha actual y el dia anterior" sap:VirtualizedContainerService.HintSize="766,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Obtener la fecha de hoy&#xA;Dim today As DateTime = DateTime.Today&#xA;' Obtener la fecha de ayer&#xA;Dim yesterday As DateTime = today.AddDays(-5)&#xA;&#xA;' Formatear las fechas al formato yyyy-MM-dd&#xA;vHasta = today.ToString(&quot;yyyy-MM-dd&quot;)&#xA;vDesde = yesterday.ToString(&quot;yyyy-MM-dd&quot;)" DisplayName="Obtener la fecha actual y el dia anterior" sap:VirtualizedContainerService.HintSize="638,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
       <ui:InvokeCode.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="vDesde">[vDesde]</InOutArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="vHasta">[vHasta]</InOutArgument>
@@ -158,20 +159,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeCode>
-    <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="766,175" sap2010:WorkflowViewState.IdRef="Assign_22">
+    <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="638,175" sap2010:WorkflowViewState.IdRef="Assign_24">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[vDesde]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["2025-11-01"]</InArgument>
+        <InArgument x:TypeArguments="x:String">["2025-12-01"]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="766,175" sap2010:WorkflowViewState.IdRef="Assign_23">
+    <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="638,175" sap2010:WorkflowViewState.IdRef="Assign_25">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[vHasta]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["2025-11-30"]</InArgument>
+        <InArgument x:TypeArguments="x:String">["2025-12-10"]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -180,7 +181,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="766,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Escaneando órdenes... &#xA;Desde: &quot; +vDesde+ &#xA;&quot; Hasta: &quot;+vHasta]">
+    <ui:LogMessage DisplayName="Registrar mensaje" sap:VirtualizedContainerService.HintSize="638,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Escaneando órdenes... &#xA;Desde: &quot; +vDesde+ &#xA;&quot; Hasta: &quot;+vHasta]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -188,25 +189,163 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="766,2921" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5" RetryInterval="00:00:02">
-      <ui:RetryScope.ActivityBody>
-        <ActivityAction>
-          <Sequence DisplayName="Acción" sap:VirtualizedContainerService.HintSize="724,2721" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Ventas" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="638,2164" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="9194a22e-054e-4f03-b170-4392f8d604ae" Timeout="10" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,1839" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="variable1" />
+              <Variable x:TypeArguments="x:String" Name="variable2" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Ventas" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="690,2661" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="9194a22e-054e-4f03-b170-4392f8d604ae" Timeout="10" Version="V2" WindowResize="Maximize">
-              <uix:NApplicationCard.Body>
-                <ActivityAction x:TypeArguments="x:Object">
+            <uix:NExtractData AppendResults="False" ContinueOnError="False" DataTable="[ExtractDataTable]" DelayAfter="3" DelayBefore="3" DelayBetweenPages="5" DisplayName="Extraer datos de tabla" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Ordenes'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Fecha'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="570,194" sap2010:WorkflowViewState.IdRef="NExtractData_5" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="9194a22e-054e-4f03-b170-4392f8d604ae" Timeout="500" Version="V4">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="mercadolibre.com.uy/ventas/omni/listado" DesignTimeRectangle="849, 675, 85, 26" DesignTimeScaleFactor="0.800000011920929" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__link' parentid='desktop' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__link' parentid='desktop' tag='A' type='' check:innerText='Siguiente' /&gt;" Guid="bfac9c5f-f18d-4e06-b60f-f2ed7ca72bc2" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mercadolibre.com.uy/ventas/omni/listado?startPeriod=WITH_DATE_CLOSED_CUSTOM&amp;sort=DATE_CLOSED_DESC&amp;filters=&amp;subFilters=&amp;search=&amp;limit=50&amp;offset=50&amp;toCurrent=2025-12-04&amp;fromCurrent=2025-12-03&amp;pagingRequest=true&amp;page=2" DesignTimeRectangle="211, 49, 922, 10829" DesignTimeScaleFactor="0.800000011920929" FullSelectorArgument="&lt;webctrl class='sc-tab-content' parentid='desktop' tag='DIV' /&gt;" Guid="288dc8bb-d8d6-4bf4-bfca-3350ef58a28d" InformativeScreenshot="1b48092d9c00561d1f7f5594283fec45.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NExtractData>
+            <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="570,61" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayAfter="0.2" DelayBefore="0.2" DelayBetweenPages="5" DisplayName="Extraer datos de tabla" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Ordenes'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Fecha'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="NExtractData_6" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="9194a22e-054e-4f03-b170-4392f8d604ae" Timeout="60" Version="V4">
+                    <uix:NExtractData.NextLink>
+                      <uix:TargetAnchorable BrowserURL="mercadolibre.com.uy/ventas/omni/listado" CVScreenId="88370ad2-d341-49c7-8cb1-aa9dd8dfeca1" CvTextArea="854, 580, 61, 15" CvTextArgument="Siguiente" CvType="Text" DesignTimeRectangle="856, 638, 59, 15" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__arrow-title' parentid='desktop' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__arrow-title' parentid='desktop' tag='SPAN' type='' check:innerText='Siguiente' /&gt;" Guid="7b6e3c32-9c32-4bdd-8e26-3495775fc3c1" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NExtractData.NextLink>
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.mercadolibre.com.uy/ventas/omni/listado?filters=DELIVERED&amp;subFilters=&amp;search=&amp;limit=50&amp;offset=0&amp;startPeriod=WITH_DATE_CLOSED_CUSTOM&amp;toCurrent=2025-08-12&amp;fromCurrent=2025-08-01&amp;page=33&amp;sort=DATE_CLOSED_DESC" DesignTimeRectangle="211, 329, 922, 11103" DesignTimeScaleFactor="0.800000011920929" FullSelectorArgument="&lt;webctrl class='sc-tab-content' parentid='desktop' tag='DIV' /&gt;" Guid="e8adae79-9823-4a9f-bf22-506a2829101e" InformativeScreenshot="94b65d1c35a118b9de38a7516a7f67ab.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+                    </uix:NExtractData.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NExtractData>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="570,61" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extraer datos de tabla" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Ordenes'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Fecha'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Page" MaximumResults="200" ScopeIdentifier="9194a22e-054e-4f03-b170-4392f8d604ae" Version="V3">
+                    <uix:NExtractData.NextLink>
+                      <uix:TargetAnchorable BrowserURL="mercadolibre.com.uy/ventas/omni/listado" CVScreenId="1a910708-2bd0-4be0-a896-6979f28aca70" CvTextArea="854, 672, 61, 15" CvTextArgument="Siguiente" CvType="Text" DesignTimeRectangle="696, 674, 60, 14" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__arrow-title' parentid='desktop' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__arrow-title' parentid='desktop' tag='SPAN' type='' check:innerText='Siguiente' /&gt;" Guid="d3e190eb-b4cd-4af8-8b48-190c4cc2ab29" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NExtractData.NextLink>
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.mercadolibre.com.uy/ventas/omni/listado?startPeriod=WITH_DATE_CLOSED_1M_OLD&amp;sort=DATE_CLOSED_DESC&amp;filters=&amp;subFilters=&amp;search=&amp;limit=50&amp;offset=50&amp;toCurrent=2025-05-31&amp;fromCurrent=2025-05-01&amp;page=2" DesignTimeRectangle="60, -11807, 857, 12462" DesignTimeScaleFactor="0.8999999761581421" FullSelectorArgument="&lt;webctrl class='sc-tab-content' parentid='desktop' tag='DIV' /&gt;" Guid="3241dee5-55fd-43f8-b5ca-2d970230f4f5" InformativeScreenshot="53d4f42d9d628a47481ea4222ae28f7e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+                    </uix:NExtractData.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NExtractData>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="570,61" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <be:ShowDataTable ExecutionResult="{x:Null}" AllowColumnWordWrap="False" ContinueOnError="False" Delay="3" DisplayName="Show DataTable" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="ShowDataTable_1" InputDataTable="[ExtractDataTable]" Title="Datatable View" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="570,61" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SortDataTable ColumnName="{x:Null}" DataColumn="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="SortDataTable_1" OutputDataTable="[ExtractDataTable]" SortOrder="Descending">
+                    <ui:SortDataTable.ColumnIndex>
+                      <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+                        <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0">
+                          <Literal.Result>
+                            <OutArgument x:TypeArguments="s:Nullable(x:Int32)" />
+                          </Literal.Result>
+                        </Literal>
+                      </InArgument>
+                    </ui:SortDataTable.ColumnIndex>
+                  </ui:SortDataTable>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Usa el Excel Process Scope para trabajar con archivos de excel" sap:VirtualizedContainerService.HintSize="570,1335" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
                   <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="656,2416" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,1219" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="variable2" />
                     </Sequence.Variables>
@@ -216,334 +355,183 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayAfter="0.2" DelayBefore="0.2" DelayBetweenPages="5" DisplayName="Extraer datos de tabla" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Ordenes'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Fecha'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="622,194" sap2010:WorkflowViewState.IdRef="NExtractData_5" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="9194a22e-054e-4f03-b170-4392f8d604ae" Timeout="60" Version="V4">
-                      <uix:NExtractData.NextLink>
-                        <uix:TargetAnchorable BrowserURL="mercadolibre.com.uy/ventas/omni/listado" DesignTimeRectangle="849, 675, 85, 26" DesignTimeScaleFactor="0.800000011920929" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__link' parentid='desktop' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__link' parentid='desktop' tag='A' type='' check:innerText='Siguiente' /&gt;" Guid="bfac9c5f-f18d-4e06-b60f-f2ed7ca72bc2" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
-                          <uix:TargetAnchorable.PointOffset>
-                            <uix:PointOffset />
-                          </uix:TargetAnchorable.PointOffset>
-                        </uix:TargetAnchorable>
-                      </uix:NExtractData.NextLink>
-                      <uix:NExtractData.Target>
-                        <uix:TargetAnchorable BrowserURL="https://www.mercadolibre.com.uy/ventas/omni/listado?startPeriod=WITH_DATE_CLOSED_CUSTOM&amp;sort=DATE_CLOSED_DESC&amp;filters=&amp;subFilters=&amp;search=&amp;limit=50&amp;offset=50&amp;toCurrent=2025-12-04&amp;fromCurrent=2025-12-03&amp;pagingRequest=true&amp;page=2" DesignTimeRectangle="211, 49, 922, 10829" DesignTimeScaleFactor="0.800000011920929" FullSelectorArgument="&lt;webctrl class='sc-tab-content' parentid='desktop' tag='DIV' /&gt;" Guid="288dc8bb-d8d6-4bf4-bfca-3350ef58a28d" InformativeScreenshot="1b48092d9c00561d1f7f5594283fec45.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                      </uix:NExtractData.Target>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </uix:NExtractData>
-                    <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="622,223" sap2010:WorkflowViewState.IdRef="CommentOut_10">
-                      <ui:CommentOut.Body>
-                        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayAfter="0.2" DelayBefore="0.2" DelayBetweenPages="5" DisplayName="Extraer datos de tabla" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Ordenes'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Fecha'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="NExtractData_6" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="9194a22e-054e-4f03-b170-4392f8d604ae" Timeout="60" Version="V4">
-                            <uix:NExtractData.NextLink>
-                              <uix:TargetAnchorable BrowserURL="mercadolibre.com.uy/ventas/omni/listado" CVScreenId="88370ad2-d341-49c7-8cb1-aa9dd8dfeca1" CvTextArea="854, 580, 61, 15" CvTextArgument="Siguiente" CvType="Text" DesignTimeRectangle="856, 638, 59, 15" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__arrow-title' parentid='desktop' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__arrow-title' parentid='desktop' tag='SPAN' type='' check:innerText='Siguiente' /&gt;" Guid="7b6e3c32-9c32-4bdd-8e26-3495775fc3c1" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" WaitForReadyArgument="Complete">
-                                <uix:TargetAnchorable.PointOffset>
-                                  <uix:PointOffset />
-                                </uix:TargetAnchorable.PointOffset>
-                              </uix:TargetAnchorable>
-                            </uix:NExtractData.NextLink>
-                            <uix:NExtractData.Target>
-                              <uix:TargetAnchorable BrowserURL="https://www.mercadolibre.com.uy/ventas/omni/listado?filters=DELIVERED&amp;subFilters=&amp;search=&amp;limit=50&amp;offset=0&amp;startPeriod=WITH_DATE_CLOSED_CUSTOM&amp;toCurrent=2025-08-12&amp;fromCurrent=2025-08-01&amp;page=33&amp;sort=DATE_CLOSED_DESC" DesignTimeRectangle="211, 329, 922, 11103" DesignTimeScaleFactor="0.800000011920929" FullSelectorArgument="&lt;webctrl class='sc-tab-content' parentid='desktop' tag='DIV' /&gt;" Guid="e8adae79-9823-4a9f-bf22-506a2829101e" InformativeScreenshot="94b65d1c35a118b9de38a7516a7f67ab.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                            </uix:NExtractData.Target>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </uix:NExtractData>
-                        </Sequence>
-                      </ui:CommentOut.Body>
-                    </ui:CommentOut>
-                    <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="622,263" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-                      <ui:CommentOut.Body>
-                        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extraer datos de tabla" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Ordenes'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Fecha'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Page" MaximumResults="200" ScopeIdentifier="9194a22e-054e-4f03-b170-4392f8d604ae" Version="V3">
-                            <uix:NExtractData.NextLink>
-                              <uix:TargetAnchorable BrowserURL="mercadolibre.com.uy/ventas/omni/listado" CVScreenId="1a910708-2bd0-4be0-a896-6979f28aca70" CvTextArea="854, 672, 61, 15" CvTextArgument="Siguiente" CvType="Text" DesignTimeRectangle="696, 674, 60, 14" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__arrow-title' parentid='desktop' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Siguiente' class='andes-pagination__arrow-title' parentid='desktop' tag='SPAN' type='' check:innerText='Siguiente' /&gt;" Guid="d3e190eb-b4cd-4af8-8b48-190c4cc2ab29" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" WaitForReadyArgument="Complete">
-                                <uix:TargetAnchorable.PointOffset>
-                                  <uix:PointOffset />
-                                </uix:TargetAnchorable.PointOffset>
-                              </uix:TargetAnchorable>
-                            </uix:NExtractData.NextLink>
-                            <uix:NExtractData.Target>
-                              <uix:TargetAnchorable BrowserURL="https://www.mercadolibre.com.uy/ventas/omni/listado?startPeriod=WITH_DATE_CLOSED_1M_OLD&amp;sort=DATE_CLOSED_DESC&amp;filters=&amp;subFilters=&amp;search=&amp;limit=50&amp;offset=50&amp;toCurrent=2025-05-31&amp;fromCurrent=2025-05-01&amp;page=2" DesignTimeRectangle="60, -11807, 857, 12462" DesignTimeScaleFactor="0.8999999761581421" FullSelectorArgument="&lt;webctrl class='sc-tab-content' parentid='desktop' tag='DIV' /&gt;" Guid="3241dee5-55fd-43f8-b5ca-2d970230f4f5" InformativeScreenshot="53d4f42d9d628a47481ea4222ae28f7e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ventas' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                            </uix:NExtractData.Target>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </uix:NExtractData>
-                        </Sequence>
-                      </ui:CommentOut.Body>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:CommentOut>
-                    <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="622,263" sap2010:WorkflowViewState.IdRef="CommentOut_6">
-                      <ui:CommentOut.Body>
-                        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <be:ShowDataTable ExecutionResult="{x:Null}" AllowColumnWordWrap="False" ContinueOnError="False" Delay="3" DisplayName="Show DataTable" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="ShowDataTable_1" InputDataTable="[ExtractDataTable]" Title="Datatable View" />
-                        </Sequence>
-                      </ui:CommentOut.Body>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:CommentOut>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="622,61" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                      <ui:CommentOut.Body>
-                        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:SortDataTable ColumnName="{x:Null}" DataColumn="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Decending" OutputDataTable="[ExtractDataTable]" SortOrder="Descending">
-                            <ui:SortDataTable.ColumnIndex>
-                              <InArgument x:TypeArguments="s:Nullable(x:Int32)">
-                                <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0">
-                                  <Literal.Result>
-                                    <OutArgument x:TypeArguments="s:Nullable(x:Int32)" />
-                                  </Literal.Result>
-                                </Literal>
-                              </InArgument>
-                            </ui:SortDataTable.ColumnIndex>
-                          </ui:SortDataTable>
-                        </Sequence>
-                      </ui:CommentOut.Body>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:CommentOut>
-                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Usa el Excel Process Scope para trabajar con archivos de excel" sap:VirtualizedContainerService.HintSize="622,1346" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
-                      <ueab:ExcelProcessScopeX.Body>
-                        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Usa el archivo de excel y referencia a ExcelOrders" sap:VirtualizedContainerService.HintSize="502,1155" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="OrdenesEscaneadas.xlsx">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                           <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelOrders" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="588,1230" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                            <Sequence.Variables>
-                              <Variable x:TypeArguments="x:String" Name="variable2" />
-                            </Sequence.Variables>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,855" sap2010:WorkflowViewState.IdRef="Sequence_3">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Usa el archivo de excel y referencia a ExcelOrders" sap:VirtualizedContainerService.HintSize="554,1166" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="OrdenesEscaneadas.xlsx">
-                              <ueab:ExcelApplicationCard.Body>
-                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
-                                  <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelOrders" />
-                                  </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,866" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <ueab:ClearRangeX DisplayName="Limpia la hoja de excel con Clean Sheet/Range/Table" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="ClearRangeX_3" TargetRange="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ueab:ClearRangeX>
+                            <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="FormatRangeX_5" Range="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
+                              <ueab:FormatRangeX.Alignment>
+                                <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                              </ueab:FormatRangeX.Alignment>
+                              <ueab:FormatRangeX.Font>
+                                <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
+                              </ueab:FormatRangeX.Font>
+                              <ueab:FormatRangeX.Format>
+                                <ueab:GeneralFormat />
+                              </ueab:FormatRangeX.Format>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ueab:FormatRangeX>
+                            <ueab:WriteRangeX Destination="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]" DisplayName="Escribe la variable DataTable en un archivo de excel" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="False" Source="[ExtractDataTable]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ueab:WriteRangeX>
+                            <ueab:FindReplaceValueX FoundAt="{x:Null}" DisplayName="Find/Replace Value" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="FindReplaceValueX_5" LookIn="Values" Operation="ReplaceAll" ReplaceWith="[&quot;'&quot;]" ValueToFind="[&quot;#&quot;]" WhereToSearch="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ueab:FindReplaceValueX>
+                            <ueab:SortX DisplayName="Ordenar rango" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,255" sap2010:WorkflowViewState.IdRef="SortX_2" Range="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
+                              <ueab:SortX.Body>
+                                <ActivityAction>
+                                  <Sequence DisplayName="Hacer" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ueab:ClearRangeX DisplayName="Limpia la hoja de excel con Clean Sheet/Range/Table" HasHeaders="True" sap:VirtualizedContainerService.HintSize="486,61" sap2010:WorkflowViewState.IdRef="ClearRangeX_3" TargetRange="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ueab:ClearRangeX>
-                                    <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="486,61" sap2010:WorkflowViewState.IdRef="FormatRangeX_5" Range="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
-                                      <ueab:FormatRangeX.Alignment>
-                                        <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
-                                      </ueab:FormatRangeX.Alignment>
-                                      <ueab:FormatRangeX.Font>
-                                        <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" UnderlineStyle="None" />
-                                      </ueab:FormatRangeX.Font>
-                                      <ueab:FormatRangeX.Format>
-                                        <ueab:GeneralFormat />
-                                      </ueab:FormatRangeX.Format>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ueab:FormatRangeX>
-                                    <ueab:WriteRangeX Destination="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]" DisplayName="Escribe la variable DataTable en un archivo de excel" sap:VirtualizedContainerService.HintSize="486,61" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="False" Source="[ExtractDataTable]">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ueab:WriteRangeX>
-                                    <ueab:FindReplaceValueX FoundAt="{x:Null}" DisplayName="Find/Replace Value" sap:VirtualizedContainerService.HintSize="486,61" sap2010:WorkflowViewState.IdRef="FindReplaceValueX_5" LookIn="Values" Operation="ReplaceAll" ReplaceWith="[&quot;'&quot;]" ValueToFind="[&quot;#&quot;]" WhereToSearch="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ueab:FindReplaceValueX>
-                                    <ueab:SortX DisplayName="Ordenar rango" HasHeaders="True" sap:VirtualizedContainerService.HintSize="486,255" sap2010:WorkflowViewState.IdRef="SortX_2" Range="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
-                                      <ueab:SortX.Body>
-                                        <ActivityAction>
-                                          <Sequence DisplayName="Hacer" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                            <ueab:SortColumnX ColumnName="[ExcelOrders.Sheet(&quot;Hoja1&quot;).Cell(&quot;A1&quot;)]" DisplayName="Ordenar por columna" sap:VirtualizedContainerService.HintSize="382,73" sap2010:WorkflowViewState.IdRef="SortColumnX_2" SortDirection="Ascending" />
-                                          </Sequence>
-                                        </ActivityAction>
-                                      </ueab:SortX.Body>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ueab:SortX>
-                                    <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="486,61" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-                                      <ui:CommentOut.Body>
-                                        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ueab:SortX DisplayName="Ordenar rango" HasHeaders="True" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="SortX_1" Range="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
-                                            <ueab:SortX.Body>
-                                              <ActivityAction>
-                                                <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="468,146" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <ueab:SortColumnX ColumnName="[ExcelOrders.Sheet(&quot;Hoja1&quot;).Cell(&quot;A1&quot;)]" DisplayName="Ordenar por columna" sap:VirtualizedContainerService.HintSize="382,73" sap2010:WorkflowViewState.IdRef="SortColumnX_1" SortDirection="Ascending" />
-                                                </Sequence>
-                                              </ActivityAction>
-                                            </ueab:SortX.Body>
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </ueab:SortX>
-                                        </Sequence>
-                                      </ui:CommentOut.Body>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:CommentOut>
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,136" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                                      <ui:CommentOut.Body>
-                                        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ueab:FindReplaceValueX FoundAt="{x:Null}" DisplayName="Find/Replace Value" sap:VirtualizedContainerService.HintSize="434,257" sap2010:WorkflowViewState.IdRef="FindReplaceValueX_6" LookIn="Values" Operation="ReplaceAll" ReplaceWith="[&quot;flex&quot;]" ValueToFind="[&quot;undefined&quot;]" WhereToSearch="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </ueab:FindReplaceValueX>
-                                        </Sequence>
-                                      </ui:CommentOut.Body>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:CommentOut>
-                                    <Assign sap:VirtualizedContainerService.HintSize="486,106" sap2010:WorkflowViewState.IdRef="Assign_4">
-                                      <Assign.To>
-                                        <OutArgument x:TypeArguments="sd:DataTable">[out_ArgumentoOrders]</OutArgument>
-                                      </Assign.To>
-                                      <Assign.Value>
-                                        <InArgument x:TypeArguments="sd:DataTable">[ExcelOrders.Sheet("Hoja1")]</InArgument>
-                                      </Assign.Value>
-                                    </Assign>
+                                    <ueab:SortColumnX ColumnName="[ExcelOrders.Sheet(&quot;Hoja1&quot;).Cell(&quot;A1&quot;)]" DisplayName="Ordenar por columna" sap:VirtualizedContainerService.HintSize="382,73" sap2010:WorkflowViewState.IdRef="SortColumnX_2" SortDirection="Ascending" />
                                   </Sequence>
                                 </ActivityAction>
-                              </ueab:ExcelApplicationCard.Body>
+                              </ueab:SortX.Body>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                            </ueab:ExcelApplicationCard>
+                            </ueab:SortX>
+                            <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ueab:SortX DisplayName="Ordenar rango" HasHeaders="True" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="SortX_1" Range="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
+                                    <ueab:SortX.Body>
+                                      <ActivityAction>
+                                        <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="468,146" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ueab:SortColumnX ColumnName="[ExcelOrders.Sheet(&quot;Hoja1&quot;).Cell(&quot;A1&quot;)]" DisplayName="Ordenar por columna" sap:VirtualizedContainerService.HintSize="382,73" sap2010:WorkflowViewState.IdRef="SortColumnX_1" SortDirection="Ascending" />
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ueab:SortX.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ueab:SortX>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ueab:FindReplaceValueX FoundAt="{x:Null}" DisplayName="Find/Replace Value" sap:VirtualizedContainerService.HintSize="434,257" sap2010:WorkflowViewState.IdRef="FindReplaceValueX_6" LookIn="Values" Operation="ReplaceAll" ReplaceWith="[&quot;flex&quot;]" ValueToFind="[&quot;undefined&quot;]" WhereToSearch="[ExcelOrders.Sheet(&quot;Hoja1&quot;)]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ueab:FindReplaceValueX>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,170" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sd:DataTable">[out_ArgumentoOrders]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sd:DataTable">[ExcelOrders.Sheet("Hoja1")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
                           </Sequence>
                         </ActivityAction>
-                      </ueab:ExcelProcessScopeX.Body>
+                      </ueab:ExcelApplicationCard.Body>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                    </ueab:ExcelProcessScopeX>
+                    </ueab:ExcelApplicationCard>
                   </Sequence>
                 </ActivityAction>
-              </uix:NApplicationCard.Body>
-              <uix:NApplicationCard.TargetApp>
-                <uix:TargetApp Area="-8, -8, 1040, 744" BrowserType="Chrome" IconBase64="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" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="98f800a4d91d97184a8d89b5686a0c94.jpg" Selector="&lt;html app='chrome.exe' url='https://www.mercadolibre.com.uy/ventas/omni/listado?startPeriod=WITH_DATE_CLOSED_CUSTOM&amp;amp;sort=DATE_CLOSED_DESC&amp;amp;filters=&amp;amp;subFilters=&amp;amp;search=&amp;amp;limit=50&amp;amp;offset=0&amp;amp;toCurrent=2025-09-06&amp;amp;fromCurrent=2025-09-05' /&gt;" Url="[&quot;https://www.mercadolibre.com.uy/ventas/omni/listado?startPeriod=WITH_DATE_CLOSED_CUSTOM&amp;sort=DATE_CLOSED_DESC&amp;filters=&amp;subFilters=&amp;search=&amp;limit=50&amp;offset=0&amp;toCurrent=&quot;+vHasta+&quot;&amp;fromCurrent=&quot;+vDesde]" />
-              </uix:NApplicationCard.TargetApp>
+              </ueab:ExcelProcessScopeX.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </uix:NApplicationCard>
+            </ueab:ExcelProcessScopeX>
           </Sequence>
         </ActivityAction>
-      </ui:RetryScope.ActivityBody>
-      <ui:RetryScope.Condition>
-        <ActivityFunc x:TypeArguments="x:Boolean" />
-      </ui:RetryScope.Condition>
-    </ui:RetryScope>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1040, 744" BrowserType="Chrome" IconBase64="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" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="98f800a4d91d97184a8d89b5686a0c94.jpg" Selector="&lt;html app='chrome.exe' url='https://www.mercadolibre.com.uy/ventas/omni/listado?startPeriod=WITH_DATE_CLOSED_CUSTOM&amp;amp;sort=DATE_CLOSED_DESC&amp;amp;filters=&amp;amp;subFilters=&amp;amp;search=&amp;amp;limit=50&amp;amp;offset=0&amp;amp;toCurrent=2025-09-06&amp;amp;fromCurrent=2025-09-05' /&gt;" Url="[&quot;https://www.mercadolibre.com.uy/ventas/omni/listado?startPeriod=WITH_DATE_CLOSED_CUSTOM&amp;sort=DATE_CLOSED_DESC&amp;filters=&amp;subFilters=&amp;search=&amp;limit=50&amp;offset=0&amp;toCurrent=&quot;+vHasta+&quot;&amp;fromCurrent=&quot;+vDesde]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>

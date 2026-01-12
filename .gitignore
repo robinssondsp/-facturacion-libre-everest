@@ -1,6 +1,62 @@
-Detalles/
-Factura/
-# UiPath locales
+############################
+# UiPath - Archivos locales
+############################
+
+# Carpetas generadas localmente
 .local/
+.storage/
+.objects/
+.entities/
+.screenshots/
+
+# Logs y temporales
+*.log
+*.tmp
+*.temp
+
+############################
+# UiPath - Configuración local
+############################
+
+# Settings por máquina / usuario
 .settings/
+.project/bookmarks.json
+.project/globalVariables.json
 .project/PackageBindingsMetadata.json
+
+############################
+# Visual Studio / Windows
+############################
+
+.vs/
+*.user
+*.suo
+*.cache
+
+# Archivos bloqueados por Excel
+~$*.xlsx
+~$*.xls
+
+############################
+# Excel de ejecución (NO versionar)
+############################
+
+*_RUN.xlsx
+*_OUTPUT.xlsx
+*_RESULTADO.xlsx
+*_TEMP.xlsx
+
+############################
+# Python (scripts UiPath)
+############################
+
+__pycache__/
+*.pyc
+
+############################
+# Sistema operativo
+############################
+
+Thumbs.db
+desktop.ini
+.DS_Store

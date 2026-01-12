@@ -127,7 +127,7 @@
       <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Scan_ML_Orders" sap:VirtualizedContainerService.HintSize="638,2909" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Scan_ML_Orders" sap:VirtualizedContainerService.HintSize="934,2829" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="vHasta" />
       <Variable x:TypeArguments="x:String" Name="vDesde" />
@@ -164,7 +164,7 @@
         <OutArgument x:TypeArguments="x:String">[vDesde]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["2025-12-01"]</InArgument>
+        <InArgument x:TypeArguments="x:String">["2025-12-10"]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="638,175" sap2010:WorkflowViewState.IdRef="Assign_25">
@@ -172,7 +172,7 @@
         <OutArgument x:TypeArguments="x:String">[vHasta]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["2025-12-10"]</InArgument>
+        <InArgument x:TypeArguments="x:String">["2025-12-31"]</InArgument>
       </Assign.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -189,7 +189,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Ventas" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="638,2164" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="9194a22e-054e-4f03-b170-4392f8d604ae" Timeout="10" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Ventas" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="638,2084" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="9194a22e-054e-4f03-b170-4392f8d604ae" Timeout="10" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
